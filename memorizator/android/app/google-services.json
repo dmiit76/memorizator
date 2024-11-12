@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "682020871596",
+    "project_id": "memorizator555-cf4b4",
+    "storage_bucket": "memorizator555-cf4b4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682020871596:android:d04e9452bf39554a532e09",
+        "android_client_info": {
+          "package_name": "info.memorizator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnZgOB9HQtBQ7NZq8_8F4-2ILCVw7rEPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

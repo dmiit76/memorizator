@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "Поддержите приложение. Отключите рекламу.",
   "errorFunScanbarcode": "Ошибка функции scanBarcode()",
   "enterPrice": "Введите цену",
-  "note": "Примечание:"
+  "note": "Примечание:",
+  "thankYou": "Спасибо за поддержку нашей разработки! Ваш вклад помогает нам продолжать улучшать это приложение.",
+  "processingYourPurchase": "Обработка вашей покупки...",
+  "errorInThePurchaseProcess": "Ошибка в процессе покупки.",
+  "thePurchaseIsCompleted": "Покупка завершена.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "Продолжайте поддерживать нас. Ваш вклад невероятно важен!",
+  "close": "Закрыть",
+  "locationClarification": "Уточнение локации",
+  "enterAddress": "Введите адрес",
+  "findOnMap": "Найти на карте",
+  "chooseALocationOption": "Выберите вариант местоположения",
+  "saveLocation": "Запомнить локацию"
 }

@@ -5,9 +5,11 @@ import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:memorizator/generated/l10n.dart';
 import 'package:memorizator/models/calcrec.dart';
+import 'package:memorizator/providers/info_provider.dart';
 import 'package:memorizator/providers/photofile_provider.dart';
 import 'package:memorizator/providers/purchase_provider.dart';
 import 'package:memorizator/providers/settings_provider.dart';
+import 'package:memorizator/screens/home_screen/map_screen.dart';
 import 'package:memorizator/screens/home_screen/view_foto.dart';
 import 'package:memorizator/screens/settings_screen/ad_manager.dart';
 import 'package:memorizator/services/constants.dart';
@@ -28,14 +30,16 @@ class MemoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final settingsProvider = context.read<SettingsProvider>();
     final photofileProvider = context.read<PhotofileProvider>();
+    final purchaseProvider = context.read<PurchaseProvider>();
     CalcRec item = snapshot.getAt(index);
     final list = item.listPhotoPath ?? [];
     final latitude = item.latitude ?? 0;
     final longitude = item.longitude ?? 0;
     // Получаем AdManager через провайдер
-    final adManager = Provider.of<PurchaseProvider>(context, listen: false);
+    final adManager = Provider.of<SettingsProvider>(context, listen: false);
     // Загружаем рекламу
     adManager.loadInterstitialAd(); // Загружаем межстраничную рекламу
+    context.read<InfoProvider>().place = item.place ?? '';
 
     return Scaffold(
       appBar: AppBar(
@@ -56,178 +60,201 @@ class MemoryScreen extends StatelessWidget {
       ),
       backgroundColor: aLightBlue,
       body: SafeArea(
-        child: SizedBox(
-          width: double.infinity,
-          child: Column(
-            children: [
-              // Дата время, поделиться
-              Container(
-                margin: const EdgeInsets.all(8),
-                height: 50,
-                width: double.infinity,
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: aBlue,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            '${S.of(context).date} ${DateFormat('dd.MM.yyyy HH:mm').format(snapshot.getAt(index)?.date ?? DateTime.now())}',
-                            style: const TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 4),
-                    GestureDetector(
-                      onTap: () {
-                        onShareButtonPressed(context, settingsProvider, item);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: aBlue,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+        child: SingleChildScrollView(
+          child: SizedBox(
+            height: (MediaQuery.of(context).orientation == Orientation.portrait)
+                ? MediaQuery.of(context).size.height -
+                    kToolbarHeight -
+                    kTextTabBarHeight -
+                    5
+                : 1500,
+            width: double.infinity,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                // Дата время, поделиться
+                Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 50,
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Expanded(
                         child: Container(
-                          margin: const EdgeInsets.only(left: 0),
-                          width: 48,
-                          //height: 50,
-                          //alignment: Alignment.,
-                          alignment: Alignment.center,
-                          child: const Icon(
-                            Icons.share,
-                            color: aWhite,
+                          decoration: BoxDecoration(
+                            color: aBlue,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              '${S.of(context).date} ${DateFormat('dd.MM.yyyy HH:mm').format(snapshot.getAt(index)?.date ?? DateTime.now())}',
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                  margin: const EdgeInsets.only(left: 8, right: 8),
-                  padding: const EdgeInsetsDirectional.all(8),
-                  //height: 100,
-                  width: double.infinity,
-                  color: Colors.white,
-                  child: buildColumnFromMap(
-                      context, snapshot.getAt(index), settingsProvider)),
-              Visibility(
-                visible: list.isNotEmpty,
-                child: Container(
-                  padding: const EdgeInsets.all(5),
-                  margin: const EdgeInsets.only(top: 8, left: 8, right: 8),
-                  height: 150,
-                  color: aWhite,
-                  width: double.infinity,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: list.length,
-                    itemBuilder: (context, i) {
-                      return GestureDetector(
-                        //key: UniqueKey(),
-                        // Просмотр фотографии:
-                        onTap: () async {
-                          photofileProvider.setItem = index;
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return ViewFoto(list[i], false);
-                              },
-                            ),
-                          );
+                      const SizedBox(width: 4),
+                      GestureDetector(
+                        onTap: () {
+                          onShareButtonPressed(context, settingsProvider, item);
                         },
-
-                        onLongPress: () {},
                         child: Container(
-                          key: UniqueKey(),
-                          margin: const EdgeInsets.only(right: 5),
-                          //height: 60,
-                          //width: 60,
-                          color: aLightBlack,
-                          child: Image(
-                            image: FileImage(
-                              File(list[i]),
+                          decoration: BoxDecoration(
+                            color: aBlue,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Container(
+                            margin: const EdgeInsets.only(left: 0),
+                            width: 48,
+                            //height: 50,
+                            //alignment: Alignment.,
+                            alignment: Alignment.center,
+                            child: const Icon(
+                              Icons.share,
+                              color: aWhite,
                             ),
                           ),
                         ),
-                      );
-                    },
+                      ),
+                    ],
                   ),
                 ),
-              ),
-              Visibility(
-                //visible: item.place!.isNotEmpty,
-                visible: item.latitude! + item.longitude! != 0,
-                child: Column(
-                  children: [
-                    FittedBox(
+                Container(
+                    margin: const EdgeInsets.only(left: 8, right: 8),
+                    padding: const EdgeInsetsDirectional.all(8),
+                    //height: 100,
+                    width: double.infinity,
+                    color: Colors.white,
+                    child: buildColumnFromMap(
+                        context, snapshot.getAt(index), settingsProvider)),
+                Visibility(
+                  visible: list.isNotEmpty,
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    margin: const EdgeInsets.only(top: 8, left: 8, right: 8),
+                    height: 150,
+                    color: aWhite,
+                    width: double.infinity,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: list.length,
+                      itemBuilder: (context, i) {
+                        return GestureDetector(
+                          //key: UniqueKey(),
+                          // Просмотр фотографии:
+                          onTap: () async {
+                            photofileProvider.setItem = index;
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return ViewFoto(list[i], false);
+                                },
+                              ),
+                            );
+                          },
+
+                          child: Container(
+                            key: UniqueKey(),
+                            margin: const EdgeInsets.only(right: 5),
+                            //height: 60,
+                            //width: 60,
+                            color: aLightBlack,
+                            child: Image(
+                              image: FileImage(
+                                File(list[i]),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                Visibility(
+                    visible: !purchaseProvider.isPaidUser,
+                    child: const SizedBox(
+                      height: 8,
+                    )), // Показываем баннер
+
+                const BannerAdWidgetAdaptive(), //  баннер
+
+                Visibility(
+                  //visible: item.place!.isNotEmpty,
+                  visible: item.latitude! + item.longitude! != 0,
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 8, right: 8),
+                    width: double.infinity,
+                    height: 20,
+                    child: FittedBox(
                       child: Text(
-                        '${item.place}',
+                        context.watch<InfoProvider>().place,
                         style:
                             const TextStyle(color: aLightBlack, fontSize: 12),
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
-              Visibility(
-                visible: item.latitude! + item.longitude! != 0,
-                child: Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(5),
-                    margin: EdgeInsets.only(
-                        bottom: 8,
-                        left: 8,
-                        right: 8,
-                        top: (item.latitude! + item.longitude! != 0) ? 0 : 8),
-                    height: 150,
-                    color: aWhite,
-                    width: double.infinity,
-                    child: FlutterMap(
-                      options: MapOptions(
-                        initialCenter:
-                            LatLng(latitude, longitude), // Координаты Москвы
-                        //LatLng(55.751244, 37.618423), // Координаты Москвы
-                        initialZoom: 16.0, // Масштаб карты
+                Visibility(
+                  visible: item.latitude! + item.longitude! != 0,
+                  child: Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.all(5),
+                      margin: EdgeInsets.only(
+                          bottom: 8,
+                          left: 8,
+                          right: 8,
+                          top: (item.latitude! + item.longitude! != 0) ? 0 : 8),
+                      height: 150,
+                      color: aWhite,
+                      width: double.infinity,
+                      child: FlutterMap(
+                        options: MapOptions(
+                          onLongPress: (tapPosition, point) {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => MapScreen(item, index)),
+                            );
+                          },
+                          initialCenter:
+                              LatLng(latitude, longitude), // Координаты Москвы
+                          //LatLng(55.751244, 37.618423), // Координаты Москвы
+                          initialZoom: 16.0, // Масштаб карты
+                        ),
+                        children: [
+                          TileLayer(
+                            urlTemplate:
+                                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                            userAgentPackageName: 'info.memorizator',
+                          ),
+                          MarkerLayer(
+                            markers: [
+                              Marker(
+                                point: LatLng(latitude,
+                                    longitude), // Координаты для маркера
+                                child: const Icon(Icons.location_on,
+                                    color: Colors.red, size: 40),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      children: [
-                        TileLayer(
-                          urlTemplate:
-                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                          userAgentPackageName: 'info.memorizator',
-                        ),
-                        MarkerLayer(
-                          markers: [
-                            Marker(
-                              point: LatLng(latitude,
-                                  longitude), // Координаты для маркера
-                              child: const Icon(Icons.location_on,
-                                  color: Colors.red, size: 40),
-                            ),
-                          ],
-                        ),
-                      ],
                     ),
                   ),
                 ),
-              ),
-              const BannerAdWidgetAdaptive(), // Показываем баннер
-              //Container()
-            ],
+                //Container()
+              ],
+            ),
           ),
         ),
       ),

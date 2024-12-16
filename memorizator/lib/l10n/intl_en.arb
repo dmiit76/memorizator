@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "Support the application. Turn off the ads.",
   "errorFunScanbarcode": "Error fun scanBarcode()",
   "enterPrice": "Enter price",
-  "note": "Note:"
+  "note": "Note:",
+  "thankYou": "Thank you for supporting our development! Your contribution helps us continue to improve this app.",
+  "processingYourPurchase": "Processing your purchase...",
+  "errorInThePurchaseProcess": "Error in the purchase process.",
+  "thePurchaseIsCompleted": "The purchase is completed.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "Continue to support us. Your contribution is incredibly important!",
+  "close": "Close",
+  "locationClarification": "Location Clarification",
+  "enterAddress": "Enter address",
+  "findOnMap": "Find on map",
+  "chooseALocationOption": "Choose a location option",
+  "saveLocation": "Save location"
 }

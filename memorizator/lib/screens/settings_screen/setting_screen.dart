@@ -21,6 +21,7 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     final settingsProvider = context.watch<SettingsProvider>();
+    final purchaseProvider = context.watch<PurchaseProvider>();
     final currentLocale = settingsProvider.currentLocale;
     final supportedLocales = S.delegate.supportedLocales;
 
@@ -273,19 +274,26 @@ class _SettingScreenState extends State<SettingScreen> {
                 //onTap: () {},
               ),
             ),
-            Container(
-                margin: const EdgeInsets.all(10),
-                width: MediaQuery.of(context).size.width * 0.8,
-                height: 2,
-                color: aBlue),
+            Visibility(
+              visible: true, //!context.read<PurchaseProvider>().isPaidUser,
+              child: Container(
+                  margin: const EdgeInsets.all(10),
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  height: 2,
+                  color: aBlue),
+            ),
             const BannerAdWidgetAdaptive(), // Показываем баннер
             Visibility(
-              visible: !context.read<PurchaseProvider>().isPaidUser,
+              visible: true, //!context.read<PurchaseProvider>().isPaidUser,
               child: ListTile(
                 contentPadding:
                     const EdgeInsets.only(bottom: 20, left: 20, right: 20),
                 title: Text(
-                  S.of(context).supportTheApplicationTurnOffTheAds,
+                  context.read<PurchaseProvider>().isPaidUser
+                      ? S
+                          .of(context)
+                          .continueToSupportUsYourContributionIsIncrediblyImportant
+                      : S.of(context).supportTheApplicationTurnOffTheAds,
                   style: const TextStyle(fontSize: 18),
                 ),
                 trailing: SizedBox(
@@ -433,6 +441,25 @@ class _SettingScreenState extends State<SettingScreen> {
                   //     );
                   //   }).toList(),
                   // ),
+
+                  // Кнопка для отладки, стирающаяя идентификацию пользователя из SharedPreferences
+                  // ListTile(
+                  //   contentPadding:
+                  //       const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+                  //   title: const Text('Стереть статус'),
+                  //   trailing: SizedBox(
+                  //     width: MediaQuery.of(context).size.width * 0.3,
+                  //     child: ElevatedButton(
+                  //         style: myButtonStyle,
+                  //         onPressed: () {
+                  //           purchaseProvider.userDonationStatus = '';
+                  //           purchaseProvider.isPaidUser = false;
+                  //           purchaseProvider.cleanStatus();
+                  //         },
+                  //         child: const Text('Стереть')),
+                  //   ),
+                  //   //onTap: () {},
+                  // ),
                 ],
               ),
             ),
@@ -462,12 +489,13 @@ class _SettingScreenState extends State<SettingScreen> {
                 );
               },
             ),
-            Text('userEmail: ${settingsProvider.userEmail}'),
+            Text('userEmail: ${purchaseProvider.userEmail}'),
 
             Visibility(
-                visible: (settingsProvider.googleUser != null),
-                child: Text(
-                    'userID: ${(settingsProvider.googleUser == null ? '' : settingsProvider.googleUser!.id)}')),
+                visible: (purchaseProvider.userId.isNotEmpty),
+                child: Text('userID: ${(purchaseProvider.userId)}')),
+            Text('isPaidUser = ${purchaseProvider.isPaidUser}'),
+            Text('userDonationStatus = ${purchaseProvider.userDonationStatus}'),
           ],
         ),
       ),

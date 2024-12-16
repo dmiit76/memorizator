@@ -1,13 +1,16 @@
 import 'dart:io';
+import 'dart:math';
 import 'dart:ui';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
+//import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:forex_currency_conversion/forex_currency_conversion.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:memorizator/generated/intl/messages_all.dart';
 import 'package:memorizator/models/calcrec.dart';
+import 'package:memorizator/screens/settings_screen/ad_manager.dart';
 import 'package:memorizator/services/constants.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
@@ -21,7 +24,7 @@ class SettingsProvider extends ChangeNotifier {
     pathPhoto();
     loadLocaleFromPreferences();
     getPackageInfo();
-    signInSilently();
+    fetchConfig();
   }
   PackageInfo packageInfo = PackageInfo(
     appName: 'Unknown',
@@ -33,12 +36,6 @@ class SettingsProvider extends ChangeNotifier {
   );
   Locale currentLocale = const Locale('en');
 
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
-  //GoogleSignIn _googleSignIn;
-  GoogleSignIn get googleSignIn => _googleSignIn;
-
-  //Locale get currentLocale => _currentLocale;
-
   DateTime lastBoxCompact = DateTime.now();
   bool setClearResult = true;
   bool setFrameDigit = true;
@@ -48,61 +45,88 @@ class SettingsProvider extends ChangeNotifier {
   String setCurrencyController = '1';
   String pathForPhoto = '';
   DonationStatus donationStatus = DonationStatus.none;
-  //Currency? localCurrency;
-  //Currency? myCurrency;
   String codeLocalCurrency = 'USD';
   String codeMyCurrency = 'USD';
   TextEditingController localCurrencyController =
       TextEditingController(text: '');
   TextEditingController myCurrencyController = TextEditingController(text: '');
   TextEditingController currencyController = TextEditingController(text: '1');
-  GoogleSignInAccount? googleUser;
-  String userEmail = '';
-  String userId = '';
 
-  Future<void> signInSilently() async {
+  final AdManager _adManager = AdManager(); // Экземпляр AdManager
+
+  final remoteConfig = FirebaseRemoteConfig.instance;
+  bool _testMode = true; // Храним значение конфигурации
+  double _percentAdPage = 30.0;
+  bool get testMode => _testMode;
+  String memorizatorAdMobID = 'ca-app-pub-3940256099942544~3347511713';
+  String memorizatorBannerAd = 'ca-app-pub-3940256099942544/6300978111';
+  String memorizatorBannerAdPage = 'ca-app-pub-3940256099942544/1033173712';
+  String memorizatorAdMobIDiOS = 'ca-app-pub-3940256099942544~1458002511';
+  String memorizatorBannerAdiOS = 'ca-app-pub-3940256099942544/2934735716';
+  String memorizatorBannerAdPageiOS = 'ca-app-pub-3940256099942544/4411468910';
+
+// await remoteConfig.setConfigSettings(RemoteConfigSettings(
+//     fetchTimeout: const Duration(minutes: 1),
+//     minimumFetchInterval: const Duration(hours: 1),
+// ));
+
+  Future<void> fetchConfig() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    //Читаем сохраненную настройку email
-    userEmail = prefs.getString('useremail') ?? '';
-    userId = prefs.getString('userid') ?? '';
-    if (userEmail
-        .isEmpty) // если не сохранен email пользователя, просим авторизацию
-    {
-      try {
-        //if (googleUser == null) {
-        GoogleSignInAccount? googleUser = await _googleSignIn.signInSilently();
-        //}
+    try {
+      await remoteConfig.setConfigSettings(
+        RemoteConfigSettings(
+          fetchTimeout: const Duration(minutes: 1),
+          minimumFetchInterval: const Duration(minutes: 60),
+        ),
+      );
+      // Заменяем expiration на cacheExpiration
+      await remoteConfig.fetchAndActivate();
+      // Читаем значение переменной testMode
+      _testMode = remoteConfig.getBool('testMode');
+      _percentAdPage = remoteConfig.getDouble('percentAdPage');
+      // Сохраняем её в памяти
+      await prefs.setBool('testmode', _testMode);
 
-        if (googleUser != null) {
-          userEmail = googleUser.email;
-          prefs.setString('useremail', googleUser.email);
-          prefs.setString('userid', googleUser.id);
-          // print("Google User ID: ${googleUser.id}"); // ID пользователя
-          // print("Google User Email: ${googleUser.email}"); // Email пользователя
-        } else {
-          // print("Пользователь не вошёл в систему.");
-          signInWithGoogle();
-        }
-      } catch (error) {
-        //print('Ошибка тихого входа в Google: $error');
-      }
+      // Уведомляем всех слушателей, что данные обновились
+      notifyListeners();
+    } catch (e) {
+      //print('Error fetching remote config: $e');
+      // Если не удается получить из Firebase, читаем сохраненную в настройках
+      _testMode = prefs.getBool('testmode') ?? false;
+    }
+    if (testMode) {
+      memorizatorAdMobID = 'ca-app-pub-3940256099942544~3347511713';
+      memorizatorBannerAd = 'ca-app-pub-3940256099942544/6300978111';
+      memorizatorBannerAdPage = 'ca-app-pub-3940256099942544/1033173712';
+//memorizatorAdMobIDiOS = 'ca-app-pub-3940256099942544~1458002511';
+//memorizatorBannerAdiOS = 'ca-app-pub-3940256099942544/2934735716';
+//memorizatorBannerAdPageiOS = 'ca-app-pub-3940256099942544/4411468910';
+    } else {
+      memorizatorAdMobID = 'ca-app-pub-7889852441350586~7754231542';
+      memorizatorBannerAd = 'ca-app-pub-7889852441350586/1610790758';
+      memorizatorBannerAdPage = 'ca-app-pub-7889852441350586/3551392536';
+//memorizatorAdMobIDiOS = '';
+//memorizatorBannerAdiOS = '';
+//memorizatorBannerAdPageiOS = '';
     }
   }
 
-  Future<void> signInWithGoogle() async {
-    try {
-      GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      if (googleUser != null) {
-        SharedPreferences prefs = await SharedPreferences.getInstance();
-        userEmail = googleUser.email;
-        prefs.setString('useremail', googleUser.email);
-        prefs.setString('userid', googleUser.id);
-      }
-    } catch (error) {
-      userEmail = error.toString();
-      userId = error.toString();
-      print('Ошибка входа в Google: $error');
+// Загрузчик межстраничной рекламы
+  void loadInterstitialAd() {
+    String adUnitId = Platform.isAndroid
+        ? memorizatorBannerAdPage
+        : memorizatorBannerAdPageiOS;
+    var intValue = Random().nextInt(100);
+    if (intValue <= _percentAdPage) {
+      _adManager.loadInterstitialAd(adUnitId);
     }
+  }
+
+  void showInterstitialAd() {
+    String adUnitId = Platform.isAndroid
+        ? memorizatorBannerAdPage
+        : memorizatorBannerAdPageiOS;
+    _adManager.showInterstitialAd(adUnitId);
   }
 
 // Загрузка сохраненной локали из SharedPreferences
@@ -169,42 +193,23 @@ class SettingsProvider extends ChangeNotifier {
       default:
         return locale.languageCode;
     }
-
-    // switch (locale.languageCode) {
-    //   case 'en':
-    //     return 'English';
-    //   case 'ar':
-    //     return 'Arabic';
-    //   case 'bn':
-    //     return 'Bengali';
-    //   case 'de':
-    //     return 'German';
-    //   case 'es':
-    //     return 'Spanish';
-    //   case 'fr':
-    //     return 'French';
-    //   case 'hi':
-    //     return 'Hindi';
-    //   case 'it':
-    //     return 'Italian';
-    //   case 'ja':
-    //     return 'Japanese';
-    //   case 'ko':
-    //     return 'Korean';
-    //   case 'pt':
-    //     return 'Portuguese';
-    //   case 'ru':
-    //     return 'Russian';
-    //   case 'tr':
-    //     return 'Turkish';
-    //   case 'vi':
-    //     return 'Vietnamese';
-    //   case 'zh':
-    //     return 'Chinese';
-    //   default:
-    //     return locale.languageCode;
-    // }
   }
+
+  // 'ar':
+  // 'bn':
+  // 'de':
+  // 'en':
+  // 'es':
+  // 'fr':
+  // 'hi':
+  // 'it':
+  // 'ja':
+  // 'ko':
+  // 'pt':
+  // 'ru':
+  // 'tr':
+  // 'vi':
+  // 'zh':
 
   Future inputCurrencyController(String setCurrencyController) async {
     refreshList.value = refreshList.value + 1;
@@ -366,40 +371,6 @@ class SettingsProvider extends ChangeNotifier {
     }
   }
 
-  String chooseCurrency1(BuildContext context, String code) {
-    List<String> favofite = [];
-    if (!favofite.contains(code)) {
-      favofite.add(code);
-    }
-    showCurrencyPicker(
-      context: context,
-      showFlag: true,
-      showSearchField: true,
-      favorite: favofite, // список валют для топа "избранные"
-      onSelect: (Currency currency) {
-        code = currency.code;
-        //print('Selected currency: ${currency.name} (${currency.code})');
-      },
-    );
-    return code;
-  }
-
-  void chooseCurrency2(BuildContext context, String currentCode) {
-    List<String> favorite = [];
-    if (!favorite.contains(currentCode)) {
-      favorite.add(currentCode);
-    }
-    showCurrencyPicker(
-      context: context,
-      showFlag: true,
-      showSearchField: true,
-      favorite: favorite, // список валют для топа "избранные"
-      onSelect: (Currency currency) {
-        currentCode = currency.code;
-      },
-    );
-  }
-
   void chooseCurrency(BuildContext context, String initialCode,
       Function(String) onCurrencySelected) {
     List<String> favorite = [];
@@ -423,16 +394,6 @@ class SettingsProvider extends ChangeNotifier {
   Currency? getCurrencyByCode(String code) {
     return CurrencyService().findByCode(code);
   }
-
-  // Widget getFlagWidget(String code) {
-  //   Currency? currency = getCurrencyByCode(code);
-  //   if (currency != null) {
-  //     // Возвращаем флаг в формате текста
-  //     return Text(currency.flag as String);
-  //   } else {
-  //     return const Text('Flag not found'); // Если код валюты не найден
-  //   }
-  // }
 
   Future<void> checkAndCompactDatabase(BuildContext context) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();

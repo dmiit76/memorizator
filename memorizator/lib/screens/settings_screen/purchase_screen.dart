@@ -9,46 +9,60 @@ class PurchaseScreen extends StatelessWidget {
   const PurchaseScreen({super.key});
 
   void handlePurchase(BuildContext context, ProductDetails product) async {
+    final purchaseProvider = context.read<PurchaseProvider>();
+    purchaseProvider.isPurchaseComplete = false;
+    purchaseProvider.mapPurchaseMessage = {
+      "progress": S.of(context).processingYourPurchase,
+      "complete": S.of(context).thePurchaseIsCompleted,
+      "error": S.of(context).errorInThePurchaseProcess
+    };
+
     try {
       // Инициируем процесс покупки
-      Provider.of<PurchaseProvider>(context, listen: false).buyProduct(product);
+      purchaseProvider.buyProduct(product, context);
       showDialog(
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
           return Consumer<PurchaseProvider>(
               builder: (context, provider, child) {
-            return AlertDialog(
-              content: Row(
-                children: [
-                  Visibility(
-                    visible: Provider.of<PurchaseProvider>(context)
-                        .purchaseProcessing,
-                    child: const Column(
-                      children: [
-                        CircularProgressIndicator(),
-                        SizedBox(width: 20),
-                      ],
+            if (purchaseProvider.isPurchaseComplete) {
+              // Закрыть диалог, если покупка завершена
+              Navigator.of(context).pop();
+            }
+            return Consumer<PurchaseProvider>(
+                builder: (context, provider, child) {
+              return AlertDialog(
+                content: Row(
+                  children: [
+                    Visibility(
+                      visible: purchaseProvider.purchaseProcessing,
+                      child: const Column(
+                        children: [
+                          CircularProgressIndicator(),
+                          SizedBox(width: 20),
+                        ],
+                      ),
                     ),
-                  ),
-                  Text(Provider.of<PurchaseProvider>(context).purchaseMessage)
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Text('Закрыть'),
+                    Text(purchaseProvider.purchaseMessage)
+                  ],
                 ),
-              ],
-            );
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(S.of(context).close),
+                  ),
+                ],
+              );
+            });
           });
         },
       );
     } catch (e) {
       Navigator.pop(context); // Закрываем диалог с индикатором
-      print('Error initiating purchase: $e');
+      //print('Error initiating purchase: $e');
     }
   }
 
@@ -118,7 +132,6 @@ class PurchaseScreen extends StatelessWidget {
                                       style: myButtonStyle,
                                       onPressed: () =>
                                           handlePurchase(context, product),
-                                      //purchaseProvider.buyProduct(product),
                                       child: const Icon(
                                           Icons.shopping_cart_outlined),
                                     ),
@@ -141,13 +154,13 @@ class PurchaseScreen extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.all(8),
-              child: const Text(
+              child: Text(
                 textAlign: TextAlign.center,
-                'Thank you for supporting our development! Your contribution helps us continue to improve this app.',
-                style: TextStyle(color: aBlue, fontWeight: FontWeight.bold),
+                S.of(context).thankYou,
+                style:
+                    const TextStyle(color: aBlue, fontWeight: FontWeight.bold),
               ),
             ),
-            Text('isPaidUser = ${purchaseProvider.isPaidUser}'),
           ],
         ),
       ),

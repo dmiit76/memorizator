@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "Apoie o aplicativo. Desative os anúncios.",
   "errorFunScanbarcode": "Erro na função scanBarcode()",
   "enterPrice": "Insira o preço",
-  "note": "Nota:"
+  "note": "Nota:",
+  "thankYou": "Obrigado por apoiar nosso desenvolvimento! Sua contribuição nos ajuda a continuar melhorando este aplicativo.",
+  "processingYourPurchase": "Processando sua compra...",
+  "errorInThePurchaseProcess": "Erro no processo de compra.",
+  "thePurchaseIsCompleted": "A compra está concluída.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "Continue nos apoiando. Sua contribuição é incrivelmente importante!",
+  "close": "Fechar",
+  "locationClarification": "Esclarecimento de localização",
+  "enterAddress": "Insira o endereço",
+  "findOnMap": "Encontrar no mapa",
+  "chooseALocationOption": "Escolha uma opção de localização",
+  "saveLocation": "Salvar localização"
 }

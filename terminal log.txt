@@ -1,0 +1,1017 @@
+[        ]   Build cache is disabled
+[        ] Skipping task ':share_plus:prepareLintJarForPublish' as it is up-to-date.
+[        ] Resolve mutations for :share_plus:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :share_plus:mergeDebugJavaResource UP-TO-DATE
+[        ] Caching disabled for task ':share_plus:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':share_plus:mergeDebugJavaResource' as it is up-to-date.
+[        ] Resolve mutations for :share_plus:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :share_plus:syncDebugLibJars UP-TO-DATE
+[        ] Caching disabled for task ':share_plus:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':share_plus:syncDebugLibJars' as it is up-to-date.
+[        ] Resolve mutations for :share_plus:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :share_plus:bundleDebugAar UP-TO-DATE
+[        ] Caching disabled for task ':share_plus:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':share_plus:bundleDebugAar' as it is up-to-date.
+[        ] Resolve mutations for :share_plus:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :share_plus:assembleDebug UP-TO-DATE
+[        ] Skipping task ':share_plus:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :shared_preferences_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.   
+[        ] :shared_preferences_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':shared_preferences_android:stripDebugDebugSymbols' as it has no source files and no previous output files.     
+[        ] Resolve mutations for :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread
+3,5,main]) started.
+[        ] :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:copyDebugJniLibsProjectAndLocalJars' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.  
+[        ] :shared_preferences_android:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:extractDebugAnnotations UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:extractDebugAnnotations' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main])       
+started.
+[        ] :shared_preferences_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:extractDeepLinksForAarDebug UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:extractDeepLinksForAarDebug' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main])  
+started.
+[        ] :shared_preferences_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:mergeDebugGeneratedProguardFiles UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:mergeDebugGeneratedProguardFiles' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main])   
+started.
+[        ] :shared_preferences_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:mergeDebugConsumerProguardFiles UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:mergeDebugConsumerProguardFiles' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.   
+[        ] :shared_preferences_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:prepareDebugArtProfile UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:prepareDebugArtProfile' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started. 
+[        ] :shared_preferences_android:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:prepareLintJarForPublish UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:prepareLintJarForPublish' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.   
+[        ] :shared_preferences_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:mergeDebugJavaResource UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:mergeDebugJavaResource' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :shared_preferences_android:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:syncDebugLibJars UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:syncDebugLibJars' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :shared_preferences_android:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:bundleDebugAar UP-TO-DATE
+[        ] Caching disabled for task ':shared_preferences_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':shared_preferences_android:bundleDebugAar' as it is up-to-date.
+[        ] Resolve mutations for :shared_preferences_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :shared_preferences_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:assembleDebug UP-TO-DATE
+[        ] Skipping task ':shared_preferences_android:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :webview_flutter_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.      
+[        ] :webview_flutter_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':webview_flutter_android:stripDebugDebugSymbols' as it has no source files and no previous output files.        
+[        ] Resolve mutations for :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main])  
+started.
+[        ] :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:copyDebugJniLibsProjectAndLocalJars' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.     
+[        ] :webview_flutter_android:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:extractDebugAnnotations UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:extractDebugAnnotations' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started. 
+[        ] :webview_flutter_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:extractDeepLinksForAarDebug UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:extractDeepLinksForAarDebug' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main])     
+started.
+[        ] :webview_flutter_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:mergeDebugGeneratedProguardFiles UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:mergeDebugGeneratedProguardFiles' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main])      
+started.
+[        ] :webview_flutter_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:mergeDebugConsumerProguardFiles UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:mergeDebugConsumerProguardFiles' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.      
+[        ] :webview_flutter_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:prepareDebugArtProfile UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:prepareDebugArtProfile' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.    
+[        ] :webview_flutter_android:prepareLintJarForPublish (Thread[Execution worker Thread 9,5,main]) started.
+[        ] > Task :webview_flutter_android:prepareLintJarForPublish UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:prepareLintJarForPublish' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:mergeDebugJavaResource (Thread[Execution worker Thread 9,5,main]) started.      
+[        ] :webview_flutter_android:mergeDebugJavaResource (Thread[Execution worker Thread 9,5,main]) started.
+[        ] > Task :webview_flutter_android:mergeDebugJavaResource UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:mergeDebugJavaResource' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:syncDebugLibJars (Thread[Execution worker Thread 9,5,main]) started.
+[        ] :webview_flutter_android:syncDebugLibJars (Thread[Execution worker Thread 9,5,main]) started.
+[        ] > Task :webview_flutter_android:syncDebugLibJars UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:syncDebugLibJars' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:bundleDebugAar (Thread[Execution worker Thread 9,5,main]) started.
+[        ] :webview_flutter_android:bundleDebugAar (Thread[Execution worker Thread 9,5,main]) started.
+[        ] > Task :webview_flutter_android:bundleDebugAar UP-TO-DATE
+[        ] Caching disabled for task ':webview_flutter_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':webview_flutter_android:bundleDebugAar' as it is up-to-date.
+[        ] Resolve mutations for :webview_flutter_android:assembleDebug (Thread[Execution worker Thread 9,5,main]) started.
+[        ] :webview_flutter_android:assembleDebug (Thread[Execution worker Thread 9,5,main]) started.
+[        ] > Task :webview_flutter_android:assembleDebug UP-TO-DATE
+[        ] Skipping task ':webview_flutter_android:assembleDebug' as it has no actions.
+[        ] Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+[        ] You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts  
+or plugins.
+[        ] For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings  
+in the Gradle documentation.
+[        ] BUILD SUCCESSFUL in 4s
+[        ] 500 actionable tasks: 4 executed, 496 up-to-date
+[        ] Watched directory hierarchies: [C:\flutter\packages\flutter_tools\gradle, D:\edu\memorizator\memorizator\android]
+[ +526 ms] Running Gradle task 'assembleDebug'... (completed in 7,9s)
+[  +13 ms] Calculate SHA1: LocalDirectory: 'D:\edu\memorizator\memorizator\build\app\outputs\flutter-apk'/app-debug.apk
+[ +934 ms] √ Built build\app\outputs\flutter-apk\app-debug.apk
+[   +3 ms] executing: C:\Users\dmiit\AppData\Local\Android\sdk\build-tools\35.0.0\aapt dump xmltree
+D:\edu\memorizator\memorizator\build\app\outputs\flutter-apk\app-debug.apk AndroidManifest.xml
+[  +46 ms] Exit code 0 from: C:\Users\dmiit\AppData\Local\Android\sdk\build-tools\35.0.0\aapt dump xmltree
+D:\edu\memorizator\memorizator\build\app\outputs\flutter-apk\app-debug.apk AndroidManifest.xml
+[        ] N: android=http://schemas.android.com/apk/res/android
+             E: manifest (line=2)
+               A: android:versionCode(0x0101021b)=(type 0x10)0xa
+               A: android:versionName(0x0101021c)="1.0.0" (Raw: "1.0.0")
+               A: android:compileSdkVersion(0x01010572)=(type 0x10)0x22
+               A: android:compileSdkVersionCodename(0x01010573)="14" (Raw: "14")
+               A: package="info.memorizator" (Raw: "info.memorizator")
+               A: platformBuildVersionCode=(type 0x10)0x22
+               A: platformBuildVersionName=(type 0x10)0xe
+               E: uses-sdk (line=7)
+                 A: android:minSdkVersion(0x0101020c)=(type 0x10)0x15
+                 A: android:targetSdkVersion(0x01010270)=(type 0x10)0x22
+               E: uses-permission (line=15)
+                 A: android:name(0x01010003)="android.permission.INTERNET" (Raw: "android.permission.INTERNET")
+               E: uses-permission (line=16)
+                 A: android:name(0x01010003)="com.android.vending.BILLING" (Raw: "com.android.vending.BILLING")
+               E: uses-permission (line=17)
+                 A: android:name(0x01010003)="android.permission.CAMERA" (Raw: "android.permission.CAMERA")
+               E: uses-permission (line=18)
+                 A: android:name(0x01010003)="android.permission.WRITE_EXTERNAL_STORAGE" (Raw:
+                 "android.permission.WRITE_EXTERNAL_STORAGE")
+               E: uses-feature (line=20)
+                 A: android:name(0x01010003)="android.hardware.camera" (Raw: "android.hardware.camera")
+                 A: android:required(0x0101028e)=(type 0x12)0x0
+               E: uses-permission (line=24)
+                 A: android:name(0x01010003)="android.permission.ACCESS_FINE_LOCATION" (Raw: "android.permission.ACCESS_FINE_LOCATION")   
+               E: uses-permission (line=25)
+                 A: android:name(0x01010003)="android.permission.ACCESS_COARSE_LOCATION" (Raw:
+                 "android.permission.ACCESS_COARSE_LOCATION")
+               E: uses-feature (line=26)
+                 A: android:name(0x01010003)="android.hardware.location.gps" (Raw: "android.hardware.location.gps")
+               E: queries (line=34)
+                 E: intent (line=35)
+                   E: action (line=36)
+                     A: android:name(0x01010003)="android.intent.action.PROCESS_TEXT" (Raw: "android.intent.action.PROCESS_TEXT")
+                   E: data (line=38)
+                     A: android:mimeType(0x01010026)="text/plain" (Raw: "text/plain")
+                 E: intent (line=40)
+                   E: action (line=41)
+                     A: android:name(0x01010003)="com.android.vending.billing.InAppBillingService.BIND" (Raw:
+                     "com.android.vending.billing.InAppBillingService.BIND")
+                 E: intent (line=43)
+                   E: action (line=44)
+                     A: android:name(0x01010003)="android.intent.action.VIEW" (Raw: "android.intent.action.VIEW")
+                   E: category (line=46)
+                     A: android:name(0x01010003)="android.intent.category.BROWSABLE" (Raw: "android.intent.category.BROWSABLE")
+                   E: data (line=48)
+                     A: android:scheme(0x01010027)="https" (Raw: "https")
+                 E: intent (line=51)
+                   E: action (line=52)
+                     A: android:name(0x01010003)="android.support.customtabs.action.CustomTabsService" (Raw:
+                     "android.support.customtabs.action.CustomTabsService")
+                 E: intent (line=55)
+                   E: action (line=56)
+                     A: android:name(0x01010003)="android.intent.action.INSERT" (Raw: "android.intent.action.INSERT")
+                   E: data (line=58)
+                     A: android:mimeType(0x01010026)="vnd.android.cursor.dir/event" (Raw: "vnd.android.cursor.dir/event")
+                 E: intent (line=60)
+                   E: action (line=61)
+                     A: android:name(0x01010003)="android.intent.action.VIEW" (Raw: "android.intent.action.VIEW")
+                   E: data (line=63)
+                     A: android:scheme(0x01010027)="sms" (Raw: "sms")
+                 E: intent (line=65)
+                   E: action (line=66)
+                     A: android:name(0x01010003)="android.intent.action.DIAL" (Raw: "android.intent.action.DIAL")
+                   E: data (line=68)
+                     A: android:path(0x0101002a)="tel:" (Raw: "tel:")
+               E: uses-permission (line=72)
+                 A: android:name(0x01010003)="android.permission.ACCESS_NETWORK_STATE" (Raw: "android.permission.ACCESS_NETWORK_STATE")   
+               E: uses-permission (line=73)
+                 A: android:name(0x01010003)="android.permission.WAKE_LOCK" (Raw: "android.permission.WAKE_LOCK")
+               E: uses-permission (line=74)
+                 A: android:name(0x01010003)="com.google.android.gms.permission.AD_ID" (Raw: "com.google.android.gms.permission.AD_ID")   
+               E: uses-permission (line=75)
+                 A: android:name(0x01010003)="android.permission.ACCESS_ADSERVICES_AD_ID" (Raw:
+                 "android.permission.ACCESS_ADSERVICES_AD_ID")
+               E: uses-permission (line=76)
+                 A: android:name(0x01010003)="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" (Raw:
+                 "android.permission.ACCESS_ADSERVICES_ATTRIBUTION")
+               E: uses-permission (line=77)
+                 A: android:name(0x01010003)="android.permission.ACCESS_ADSERVICES_TOPICS" (Raw:
+                 "android.permission.ACCESS_ADSERVICES_TOPICS")
+               E: uses-permission (line=78)
+                 A: android:name(0x01010003)="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" (Raw:
+                 "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE")
+               E: uses-permission (line=79)
+                 A: android:name(0x01010003)="android.permission.FOREGROUND_SERVICE" (Raw: "android.permission.FOREGROUND_SERVICE")       
+               E: permission (line=81)
+                 A: android:name(0x01010003)="info.memorizator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" (Raw:
+                 "info.memorizator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION")
+                 A: android:protectionLevel(0x01010009)=(type 0x11)0x2
+               E: uses-permission (line=85)
+                 A: android:name(0x01010003)="info.memorizator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" (Raw:
+                 "info.memorizator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION")
+               E: application (line=87)
+                 A: android:label(0x01010001)="Memorizator" (Raw: "Memorizator")
+                 A: android:icon(0x01010002)=@0x7f0c0000
+                 A: android:name(0x01010003)="android.app.Application" (Raw: "android.app.Application")
+                 A: android:debuggable(0x0101000f)=(type 0x12)0xffffffff
+                 A: android:hardwareAccelerated(0x010102d3)=(type 0x12)0xffffffff
+                 A: android:extractNativeLibs(0x010104ea)=(type 0x12)0xffffffff
+                 A: android:appComponentFactory(0x0101057a)="androidx.core.app.CoreComponentFactory" (Raw:
+                 "androidx.core.app.CoreComponentFactory")
+                 E: meta-data (line=97)
+                   A: android:name(0x01010003)="com.google.android.geo.API_KEY" (Raw: "com.google.android.geo.API_KEY")
+                   A: android:value(0x01010024)="AIzaSyBRNm84Y2r3Lc-QnQBGC0w_Ej-sRK6ridM" (Raw: "AIzaSyBRNm84Y2r3Lc-QnQBGC0w_Ej-sRK6ridM")
+                 E: meta-data (line=102)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.APPLICATION_ID" (Raw:
+                   "com.google.android.gms.ads.APPLICATION_ID")
+                   A: android:value(0x01010024)="ca-app-pub-3940256099942544~3347511713" (Raw: "ca-app-pub-3940256099942544~3347511713")  
+                 E: activity (line=107)
+                   A: android:theme(0x01010000)=@0x7f1000dc
+                   A: android:name(0x01010003)="info.memorizator.MainActivity" (Raw: "info.memorizator.MainActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:taskAffinity(0x01010012)="" (Raw: "")
+                   A: android:launchMode(0x0101001d)=(type 0x10)0x1
+                   A: android:configChanges(0x0101001f)=(type 0x11)0x40003fb4
+                   A: android:windowSoftInputMode(0x0101022b)=(type 0x11)0x10
+                   A: android:hardwareAccelerated(0x010102d3)=(type 0x12)0xffffffff
+                   E: meta-data (line=123)
+                     A: android:name(0x01010003)="io.flutter.embedding.android.NormalTheme" (Raw:
+                     "io.flutter.embedding.android.NormalTheme")
+                     A: android:resource(0x01010025)=@0x7f1000e7
+                   E: intent-filter (line=127)
+                     E: action (line=128)
+                       A: android:name(0x01010003)="android.intent.action.MAIN" (Raw: "android.intent.action.MAIN")
+                     E: category (line=130)
+                       A: android:name(0x01010003)="android.intent.category.LAUNCHER" (Raw: "android.intent.category.LAUNCHER")
+                 E: meta-data (line=137)
+                   A: android:name(0x01010003)="flutterEmbedding" (Raw: "flutterEmbedding")
+                   A: android:value(0x01010024)=(type 0x10)0x2
+                 E: activity (line=141)
+                   A: android:name(0x01010003)="de.mintware.barcode_scan.BarcodeScannerActivity" (Raw:
+                   "de.mintware.barcode_scan.BarcodeScannerActivity")
+                 E: service (line=143)
+                   A: android:name(0x01010003)="com.google.firebase.components.ComponentDiscoveryService" (Raw:
+                   "com.google.firebase.components.ComponentDiscoveryService")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0xffffffff
+                   E: meta-data (line=147)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:io.flutter.plugins.firebase.analytics.FlutterFirebaseAppRegi
+                     strar" (Raw: "com.google.firebase.components:io.flutter.plugins.firebase.analytics.FlutterFirebaseAppRegistrar")     
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=150)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:io.flutter.plugins.firebase.firebaseremoteconfig.FlutterFire
+                     baseAppRegistrar" (Raw:
+                     "com.google.firebase.components:io.flutter.plugins.firebase.firebaseremoteconfig.FlutterFirebaseAppRegistrar")       
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=153)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistra
+                     r" (Raw: "com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=156)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegi
+                     strar" (Raw: "com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar")     
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=159)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"  
+                     (Raw: "com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=162)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsCo
+                     nnectorRegistrar" (Raw:
+                     "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar")       
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=165)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRe
+                     gistrar" (Raw: "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar") 
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=168)
+                     A:
+                     android:name(0x01010003)="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegis
+                     trar" (Raw: "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar")       
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=171)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"   
+                     (Raw: "com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=174)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" (Raw:    
+                     "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=177)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" (Raw:    
+                     "com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw:
+                     "com.google.firebase.components.ComponentRegistrar")
+                 E: provider (line=182)
+                   A: android:name(0x01010003)="io.flutter.plugins.imagepicker.ImagePickerFileProvider" (Raw:
+                   "io.flutter.plugins.imagepicker.ImagePickerFileProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="info.memorizator.flutter.image_provider" (Raw:
+                   "info.memorizator.flutter.image_provider")
+                   A: android:grantUriPermissions(0x0101001b)=(type 0x12)0xffffffff
+                   E: meta-data (line=187)
+                     A: android:name(0x01010003)="android.support.FILE_PROVIDER_PATHS" (Raw: "android.support.FILE_PROVIDER_PATHS")       
+                     A: android:resource(0x01010025)=@0x7f120001
+                 E: service (line=191)
+                   A: android:name(0x01010003)="com.google.android.gms.metadata.ModuleDependencies" (Raw:
+                   "com.google.android.gms.metadata.ModuleDependencies")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: intent-filter (line=195)
+                     E: action (line=196)
+                       A: android:name(0x01010003)="com.google.android.gms.metadata.MODULE_DEPENDENCIES" (Raw:
+                       "com.google.android.gms.metadata.MODULE_DEPENDENCIES")
+                   E: meta-data (line=199)
+                     A: android:name(0x01010003)="photopicker_activity:0:required" (Raw: "photopicker_activity:0:required")
+                     A: android:value(0x01010024)="" (Raw: "")
+                 E: service (line=203)
+                   A: android:name(0x01010003)="com.baseflow.geolocator.GeolocatorLocationService" (Raw:
+                   "com.baseflow.geolocator.GeolocatorLocationService")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:foregroundServiceType(0x01010599)=(type 0x11)0x8
+                 E: meta-data (line=209)
+                   A: android:name(0x01010003)="io.flutter.embedded_views_preview" (Raw: "io.flutter.embedded_views_preview")
+                   A: android:value(0x01010024)=(type 0x12)0xffffffff
+                 E: provider (line=216)
+                   A: android:name(0x01010003)="dev.fluttercommunity.plus.share.ShareFileProvider" (Raw:
+                   "dev.fluttercommunity.plus.share.ShareFileProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="info.memorizator.flutter.share_provider" (Raw:
+                   "info.memorizator.flutter.share_provider")
+                   A: android:grantUriPermissions(0x0101001b)=(type 0x12)0xffffffff
+                   E: meta-data (line=221)
+                     A: android:name(0x01010003)="android.support.FILE_PROVIDER_PATHS" (Raw: "android.support.FILE_PROVIDER_PATHS")       
+                     A: android:resource(0x01010025)=@0x7f120002
+                 E: receiver (line=229)
+                   A: android:name(0x01010003)="dev.fluttercommunity.plus.share.SharePlusPendingIntent" (Raw:
+                   "dev.fluttercommunity.plus.share.SharePlusPendingIntent")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: intent-filter (line=232)
+                     E: action (line=233)
+                       A: android:name(0x01010003)="EXTRA_CHOSEN_COMPONENT" (Raw: "EXTRA_CHOSEN_COMPONENT")
+                 E: meta-data (line=237)
+                   A: android:name(0x01010003)="com.google.android.play.billingclient.version" (Raw:
+                   "com.google.android.play.billingclient.version")
+                   A: android:value(0x01010024)="6.2.0" (Raw: "6.2.0")
+                 E: activity (line=241)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.android.billingclient.api.ProxyBillingActivity" (Raw:
+                   "com.android.billingclient.api.ProxyBillingActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0x5b0
+                 E: activity (line=246)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" (Raw:
+                   "com.google.android.gms.auth.api.signin.internal.SignInHubActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:excludeFromRecents(0x01010017)=(type 0x12)0xffffffff
+                 E: service (line=255)
+                   A: android:name(0x01010003)="com.google.android.gms.auth.api.signin.RevocationBoundService" (Raw:
+                   "com.google.android.gms.auth.api.signin.RevocationBoundService")
+                   A: android:permission(0x01010006)="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" (Raw:    
+                   "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION")
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:visibleToInstantApps(0x01010531)=(type 0x12)0xffffffff
+                 E: activity (line=260)
+                   A: android:theme(0x01010000)=@0x0103000f
+                   A: android:name(0x01010003)="com.google.android.gms.ads.AdActivity" (Raw: "com.google.android.gms.ads.AdActivity")     
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0xfb0
+                 E: provider (line=266)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.MobileAdsInitProvider" (Raw:
+                   "com.google.android.gms.ads.MobileAdsInitProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="info.memorizator.mobileadsinitprovider" (Raw:
+                   "info.memorizator.mobileadsinitprovider")
+                   A: android:initOrder(0x0101001a)=(type 0x10)0x64
+                 E: service (line=272)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.AdService" (Raw: "com.google.android.gms.ads.AdService")       
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: activity (line=277)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.OutOfContextTestingActivity" (Raw:
+                   "com.google.android.gms.ads.OutOfContextTestingActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0xfb0
+                 E: activity (line=281)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.google.android.gms.ads.NotificationHandlerActivity" (Raw:
+                   "com.google.android.gms.ads.NotificationHandlerActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:taskAffinity(0x01010012)="" (Raw: "")
+                   A: android:excludeFromRecents(0x01010017)=(type 0x12)0xffffffff
+                   A: android:launchMode(0x0101001d)=(type 0x10)0x2
+                 E: property (line=289)
+                   A: android:name(0x01010003)="android.adservices.AD_SERVICES_CONFIG" (Raw: "android.adservices.AD_SERVICES_CONFIG")     
+                   A: android:resource(0x01010025)=@0x7f120004
+                 E: property (line=292)
+                   A: android:name(0x01010003)="android.adservices.AD_SERVICES_CONFIG" (Raw: "android.adservices.AD_SERVICES_CONFIG")     
+                   A: android:resource(0x01010025)=@0x7f120003
+                 E: provider (line=296)
+                   A: android:name(0x01010003)="com.google.firebase.provider.FirebaseInitProvider" (Raw:
+                   "com.google.firebase.provider.FirebaseInitProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="info.memorizator.firebaseinitprovider" (Raw:
+                   "info.memorizator.firebaseinitprovider")
+                   A: android:initOrder(0x0101001a)=(type 0x10)0x64
+                   A: android:directBootAware(0x01010505)=(type 0x12)0xffffffff
+                 E: receiver (line=303)
+                   A: android:name(0x01010003)="com.google.android.gms.measurement.AppMeasurementReceiver" (Raw:
+                   "com.google.android.gms.measurement.AppMeasurementReceiver")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: service (line=309)
+                   A: android:name(0x01010003)="com.google.android.gms.measurement.AppMeasurementService" (Raw:
+                   "com.google.android.gms.measurement.AppMeasurementService")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: service (line=313)
+                   A: android:name(0x01010003)="com.google.android.gms.measurement.AppMeasurementJobService" (Raw:
+                   "com.google.android.gms.measurement.AppMeasurementJobService")
+                   A: android:permission(0x01010006)="android.permission.BIND_JOB_SERVICE" (Raw: "android.permission.BIND_JOB_SERVICE")   
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: uses-library (line=319)
+                   A: android:name(0x01010003)="androidx.window.extensions" (Raw: "androidx.window.extensions")
+                   A: android:required(0x0101028e)=(type 0x12)0x0
+                 E: uses-library (line=322)
+                   A: android:name(0x01010003)="androidx.window.sidecar" (Raw: "androidx.window.sidecar")
+                   A: android:required(0x0101028e)=(type 0x12)0x0
+                 E: uses-library (line=325)
+                   A: android:name(0x01010003)="android.ext.adservices" (Raw: "android.ext.adservices")
+                   A: android:required(0x0101028e)=(type 0x12)0x0
+                 E: provider (line=329)
+                   A: android:name(0x01010003)="androidx.startup.InitializationProvider" (Raw: "androidx.startup.InitializationProvider") 
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="info.memorizator.androidx-startup" (Raw: "info.memorizator.androidx-startup")      
+                   E: meta-data (line=333)
+                     A: android:name(0x01010003)="androidx.work.WorkManagerInitializer" (Raw: "androidx.work.WorkManagerInitializer")     
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                   E: meta-data (line=336)
+                     A: android:name(0x01010003)="androidx.lifecycle.ProcessLifecycleInitializer" (Raw:
+                     "androidx.lifecycle.ProcessLifecycleInitializer")
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                   E: meta-data (line=339)
+                     A: android:name(0x01010003)="androidx.profileinstaller.ProfileInstallerInitializer" (Raw:
+                     "androidx.profileinstaller.ProfileInstallerInitializer")
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                 E: service (line=344)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.SystemAlarmService" (Raw:
+                   "androidx.work.impl.background.systemalarm.SystemAlarmService")
+                   A: android:enabled(0x0101000e)=@0x7f040003
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: service (line=349)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemjob.SystemJobService" (Raw:
+                   "androidx.work.impl.background.systemjob.SystemJobService")
+                   A: android:permission(0x01010006)="android.permission.BIND_JOB_SERVICE" (Raw: "android.permission.BIND_JOB_SERVICE")   
+                   A: android:enabled(0x0101000e)=@0x7f040005
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: service (line=355)
+                   A: android:name(0x01010003)="androidx.work.impl.foreground.SystemForegroundService" (Raw:
+                   "androidx.work.impl.foreground.SystemForegroundService")
+                   A: android:enabled(0x0101000e)=@0x7f040004
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: receiver (line=361)
+                   A: android:name(0x01010003)="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" (Raw:
+                   "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: receiver (line=366)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" (Raw:     
+                   "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=371)
+                     E: action (line=372)
+                       A: android:name(0x01010003)="android.intent.action.ACTION_POWER_CONNECTED" (Raw:
+                       "android.intent.action.ACTION_POWER_CONNECTED")
+                     E: action (line=373)
+                       A: android:name(0x01010003)="android.intent.action.ACTION_POWER_DISCONNECTED" (Raw:
+                       "android.intent.action.ACTION_POWER_DISCONNECTED")
+                 E: receiver (line=376)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" (Raw:       
+                   "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=381)
+                     E: action (line=382)
+                       A: android:name(0x01010003)="android.intent.action.BATTERY_OKAY" (Raw: "android.intent.action.BATTERY_OKAY")       
+                     E: action (line=383)
+                       A: android:name(0x01010003)="android.intent.action.BATTERY_LOW" (Raw: "android.intent.action.BATTERY_LOW")
+                 E: receiver (line=386)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" (Raw:       
+                   "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=391)
+                     E: action (line=392)
+                       A: android:name(0x01010003)="android.intent.action.DEVICE_STORAGE_LOW" (Raw:
+                       "android.intent.action.DEVICE_STORAGE_LOW")
+                     E: action (line=393)
+                       A: android:name(0x01010003)="android.intent.action.DEVICE_STORAGE_OK" (Raw:
+                       "android.intent.action.DEVICE_STORAGE_OK")
+                 E: receiver (line=396)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" (Raw:        
+                   "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=401)
+                     E: action (line=402)
+                       A: android:name(0x01010003)="android.net.conn.CONNECTIVITY_CHANGE" (Raw: "android.net.conn.CONNECTIVITY_CHANGE")   
+                 E: receiver (line=405)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.RescheduleReceiver" (Raw:
+                   "androidx.work.impl.background.systemalarm.RescheduleReceiver")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=410)
+                     E: action (line=411)
+                       A: android:name(0x01010003)="android.intent.action.BOOT_COMPLETED" (Raw: "android.intent.action.BOOT_COMPLETED")   
+                     E: action (line=412)
+                       A: android:name(0x01010003)="android.intent.action.TIME_SET" (Raw: "android.intent.action.TIME_SET")
+                     E: action (line=413)
+                       A: android:name(0x01010003)="android.intent.action.TIMEZONE_CHANGED" (Raw:
+                       "android.intent.action.TIMEZONE_CHANGED")
+                 E: receiver (line=416)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" (Raw:
+                   "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver")
+                   A: android:enabled(0x0101000e)=@0x7f040003
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=421)
+                     E: action (line=422)
+                       A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.UpdateProxies" (Raw:
+                       "androidx.work.impl.background.systemalarm.UpdateProxies")
+                 E: receiver (line=425)
+                   A: android:name(0x01010003)="androidx.work.impl.diagnostics.DiagnosticsReceiver" (Raw:
+                   "androidx.work.impl.diagnostics.DiagnosticsReceiver")
+                   A: android:permission(0x01010006)="android.permission.DUMP" (Raw: "android.permission.DUMP")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=431)
+                     E: action (line=432)
+                       A: android:name(0x01010003)="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" (Raw:
+                       "androidx.work.diagnostics.REQUEST_DIAGNOSTICS")
+                 E: activity (line=436)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.google.android.gms.common.api.GoogleApiActivity" (Raw:
+                   "com.google.android.gms.common.api.GoogleApiActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: meta-data (line=441)
+                   A: android:name(0x01010003)="com.google.android.gms.version" (Raw: "com.google.android.gms.version")
+                   A: android:value(0x01010024)=@0x7f090008
+                 E: service (line=445)
+                   A: android:name(0x01010003)="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" (Raw:        
+                   "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: meta-data (line=448)
+                     A: android:name(0x01010003)="backend:com.google.android.datatransport.cct.CctBackendFactory" (Raw:
+                     "backend:com.google.android.datatransport.cct.CctBackendFactory")
+                     A: android:value(0x01010024)="cct" (Raw: "cct")
+                 E: receiver (line=453)
+                   A: android:name(0x01010003)="androidx.profileinstaller.ProfileInstallReceiver" (Raw:
+                   "androidx.profileinstaller.ProfileInstallReceiver")
+                   A: android:permission(0x01010006)="android.permission.DUMP" (Raw: "android.permission.DUMP")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=459)
+                     E: action (line=460)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.INSTALL_PROFILE" (Raw:
+                       "androidx.profileinstaller.action.INSTALL_PROFILE")
+                   E: intent-filter (line=462)
+                     E: action (line=463)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.SKIP_FILE" (Raw:
+                       "androidx.profileinstaller.action.SKIP_FILE")
+                   E: intent-filter (line=465)
+                     E: action (line=466)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.SAVE_PROFILE" (Raw:
+                       "androidx.profileinstaller.action.SAVE_PROFILE")
+                   E: intent-filter (line=468)
+                     E: action (line=469)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.BENCHMARK_OPERATION" (Raw:
+                       "androidx.profileinstaller.action.BENCHMARK_OPERATION")
+                 E: service (line=473)
+                   A: android:name(0x01010003)="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+                   (Raw: "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService")
+                   A: android:permission(0x01010006)="android.permission.BIND_JOB_SERVICE" (Raw: "android.permission.BIND_JOB_SERVICE")   
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: receiver (line=479)
+                   A:
+                   android:name(0x01010003)="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadc
+                   astReceiver" (Raw:
+                   "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: service (line=483)
+                   A: android:name(0x01010003)="androidx.room.MultiInstanceInvalidationService" (Raw:
+                   "androidx.room.MultiInstanceInvalidationService")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0xffffffff
+[  +27 ms] Stopping app 'app-debug.apk' on 23030RAC7Y.
+[        ] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 shell am force-stop
+info.memorizator
+[ +129 ms] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 shell pm list packages
+info.memorizator
+[ +121 ms] package:info.memorizator.coopeshop
+[   +1 ms] Installing APK.
+[   +2 ms] Installing build\app\outputs\flutter-apk\app-debug.apk...
+[        ] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 install -t -r
+D:\edu\memorizator\memorizator\build\app\outputs\flutter-apk\app-debug.apk
+[+13765 ms] Performing Streamed Install
+                     Success
+[        ] Installing build\app\outputs\flutter-apk\app-debug.apk... (completed in 13,8s)
+[   +1 ms] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 shell echo -n
+3680b8705b0b70385e30e1579032721fd21d8e6d > /data/local/tmp/sky.info.memorizator.sha1
+[ +131 ms] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 shell -x logcat -v time -t 1
+[ +418 ms] --------- beginning of main
+                    11-13 14:50:00.624 I/htmlviewercloudcontrol(25143): isStagingEnv:false param =  fps_group_config  uriMatch = 2        
+[  +10 ms] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 shell am start -a
+android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x20000000 --ez enable-dart-profiling true --ez enable-checked-mode true
+--ez verify-entry-points true info.memorizator/info.memorizator.MainActivity
+[ +262 ms] Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x20000000
+cmp=info.memorizator/.MainActivity (has extras) }
+[   +1 ms] Waiting for VM Service port to be available...
+[+2976 ms] D/FlutterGeolocator(11400): Attaching Geolocator to activity
+[ +328 ms] D/FlutterGeolocator(11400): Creating service.
+[  +22 ms] D/FlutterGeolocator(11400): Binding to location service.
+[  +11 ms] D/FlutterGeolocator(11400): Geolocator foreground service connected
+[        ] D/FlutterGeolocator(11400): Initializing Geolocator services
+[        ] D/FlutterGeolocator(11400): Flutter engine connected. Connected engine count 1
+[  +31 ms] VM Service URL on device: http://127.0.0.1:32877/Lk3exavKyek=/
+[        ] executing: C:\Users\dmiit\AppData\Local\Android\sdk\platform-tools\adb.exe -s BQPFHMA6U8QKVGT8 forward tcp:0 tcp:32877
+[  +52 ms] 48008
+[        ] Forwarded host port 48008 to device port 32877 for VM Service
+[   +4 ms] Caching compiled dill
+[  +74 ms] Connecting to service protocol: http://127.0.0.1:48008/Lk3exavKyek=/
+[ +354 ms] Launching a Dart Developer Service (DDS) instance at http://127.0.0.1:0, connecting to VM service at
+http://127.0.0.1:48008/Lk3exavKyek=/.
+[ +250 ms] DDS is listening at http://127.0.0.1:48011/40W7GA1JceM=/.
+[  +50 ms] Successfully connected to service protocol: http://127.0.0.1:48008/Lk3exavKyek=/
+[ +100 ms] DevFS: Creating new filesystem on the device (null)
+[  +71 ms] DevFS: Created new filesystem on the device (file:///data/user/0/info.memorizator/code_cache/memorizatorEFXGSE/memorizator/)
+[   +2 ms] Updating assets
+[ +283 ms] Manifest contained wildcard assets. Inserting missing file into build graph to force rerun. for more information see #56466.
+[   +5 ms] Syncing files to device 23030RAC7Y...
+[   +4 ms] Compiling dart to kernel with 0 updated files
+[   +1 ms] Processing bundle.
+[   +1 ms] <- recompile package:memorizator/main.dart 752d9683-f093-49e9-8aee-65c440a3903b
+[        ] <- 752d9683-f093-49e9-8aee-65c440a3903b
+[   +4 ms] Bundle processing done.
+[   +9 ms] D/CompatibilityChangeReporter(11400): Compat change id reported: 194532703; UID 10531; state: ENABLED
+[        ] D/CompatibilityChangeReporter(11400): Compat change id reported: 253665015; UID 10531; state: ENABLED
+[  +90 ms] Updating files.
+[        ] Pending asset builds completed. Writing dirty entries.
+[        ] DevFS: Sync finished
+[        ] Syncing files to device 23030RAC7Y... (completed in 113ms)
+[        ] Synced 0.0MB.
+[        ] <- accept
+[  +13 ms] Connected to _flutterView/0xb400007d760c5e20.
+[  +10 ms] Flutter run key commands.
+[   +2 ms] r Hot reload. 
+[        ] R Hot restart.
+[        ] h List all available interactive commands.
+[   +1 ms] d Detach (terminate "flutter run" but leave application running).
+[        ] c Clear the screen
+[        ] q Quit (terminate the application on the device).
+[   +1 ms] A Dart VM Service on 23030RAC7Y is available at: http://127.0.0.1:48011/40W7GA1JceM=/
+[ +620 ms] W/google_sign_in(11400): clientId is not supported on Android and is interpreted as serverClientId. Use serverClientId instead
+to suppress this warning.
+[  +34 ms] I/DynamiteModule(11400): Considering local module com.google.android.gms.ads.dynamite:0 and remote module
+com.google.android.gms.ads.dynamite:243799204
+[   +2 ms] I/DynamiteModule(11400): Selected remote version of com.google.android.gms.ads.dynamite, version >= 243799204
+[   +8 ms] D/DynamitePackage(11400): Instantiated singleton DynamitePackage.
+[        ] D/DynamitePackage(11400): Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
+[  +34 ms] I/Ads     (11400): Updating ad debug logging enablement.
+[  +26 ms] W/Ads     (11400): Update ad debug logging enablement as false
+[  +47 ms] W/ziparchive(11400): Unable to open
+'/data/app/~~KA0g8wwWyiT129GDI43AUQ==/com.google.android.trichromelibrary_672310733-sqDwWqDxgIh81cfNJD0W1Q==/base.dm': No such file or    
+directory
+[        ] W/ziparchive(11400): Unable to open
+'/data/app/~~KA0g8wwWyiT129GDI43AUQ==/com.google.android.trichromelibrary_672310733-sqDwWqDxgIh81cfNJD0W1Q==/base.dm': No such file or    
+directory
+[        ] W/nfo.memorizator(11400): Entry not found
+[   +1 ms] D/nativeloader(11400): Configuring clns-10 for other apk
+/data/app/~~KA0g8wwWyiT129GDI43AUQ==/com.google.android.trichromelibrary_672310733-sqDwWqDxgIh81cfNJD0W1Q==/base.apk.
+target_sdk_version=34, uses_libraries=ALL,
+library_path=/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/lib/arm64:/data/app/~~eeLJCB8LHLBgZr
+2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/base.apk!/lib/arm64-v8a:/data/app/~~KA0g8wwWyiT129GDI43AUQ==/com.google.and
+roid.trichromelibrary_672310733-sqDwWqDxgIh81cfNJD0W1Q==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+[        ] D/nativeloader(11400): Extending system_exposed_libraries:
+libapuwareapusys.mtk.so:libapuwareapusys_v2.mtk.so:libapuwarexrp.mtk.so:libapuwarexrp_v2.mtk.so:libapuwareutils.mtk.so:libapuwareutils_v2.
+mtk.so:libapuwarehmp.mtk.so:libmcv_runtime_usdk.mtk.so:libneuron_graph_delegate.mtk.so:libneuronusdk_adapter.mtk.so:libtflite_mtk.mtk.so:l
+ibarmnn_ndk.mtk.so:libcmdl_ndk.mtk.so:libnir_neon_driver_ndk.mtk.so:libmvpu_runtime.mtk.so:libmvpu_runtime_pub.mtk.so:libmvpu_engine_pub.m
+tk.so:libmvpu_pattern_pub.mtk.so:libmvpuop_mtk_cv.mtk.so:libmvpuop_mtk_nn.mtk.so:libmvpu_runtime_25.mtk.so:libmvpu_runtime_25_pub.mtk.so:l
+ibmvpu_engine_25_pub.mtk.so:libmvpu_pattern_25_pub.mtk.so:libmvpuop25_mtk_cv.mtk.so:libmvpuop25_mtk_nn.mtk.so:libmvpu_config.mtk.so:libtee
+service_client.trustonic.so:libmisys_jni.xiaomi.so
+[   +3 ms] W/nfo.memorizator(11400): Loading
+/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/oat/arm64/base.odex non-executable as it requires
+an image which we failed to load
+[   +2 ms] D/nativeloader(11400): Configuring clns-11 for other apk
+/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/base.apk. target_sdk_version=34, uses_libraries=,
+library_path=/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/lib/arm64:/data/app/~~eeLJCB8LHLBgZr
+2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/base.apk!/lib/arm64-v8a:/data/app/~~KA0g8wwWyiT129GDI43AUQ==/com.google.and
+roid.trichromelibrary_672310733-sqDwWqDxgIh81cfNJD0W1Q==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+[  +12 ms] I/WebViewFactory(11400): Loading com.google.android.webview version 130.0.6723.107 (code 672310733)
+[  +26 ms] I/cr_WVCFactoryProvider(11400): version=130.0.6723.107 (672310733) minSdkVersion=29 isBundle=true multiprocess=true packageId=2
+[  +19 ms] D/nativeloader(11400): Load
+/data/app/~~KA0g8wwWyiT129GDI43AUQ==/com.google.android.trichromelibrary_672310733-sqDwWqDxgIh81cfNJD0W1Q==/base.apk!/lib/arm64-v8a/libmon
+ochrome_64.so using ns clns-11 from class loader
+(caller=/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/base.apk): ok
+[        ] I/nfo.memorizator(11400): Compiler allocated 6370KB to compile void android.view.ViewRootImpl.performTraversals()
+[   +8 ms] D/nativeloader(11400): Load /system/lib64/libwebviewchromium_plat_support.so using ns clns-11 from class loader
+(caller=/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/base.apk): ok
+[  +14 ms] I/chromium(11400): [1113/145006.815601:INFO:variations_seed_loader.cc(68)] Failed to open file for reading.: No such file or
+directory (2)
+[   +2 ms] I/chromium(11400): [INFO:variations_seed_loader.cc(68)] Failed to open file for reading.: No such file or directory (2)        
+[  +12 ms] I/cr_LibraryLoader(11400): Successfully loaded native library
+[   +3 ms] I/cr_CachingUmaRecorder(11400): Flushed 6 samples from 6 histograms, 0 samples were dropped.
+[  +12 ms] I/cr_CombinedPProvider(11400): #registerProvider() provider:WV.z8@83413b isPolicyCacheEnabled:false policyProvidersSize:0
+[   +1 ms] I/cr_PolicyProvider(11400): #setManagerAndSource() 0
+[   +8 ms] I/SmartPower: com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService-1->background(0ms)
+R(become background) adj=-10000.
+[  +44 ms] I/cr_CombinedPProvider(11400): #linkNativeInternal() 1
+[   +5 ms] I/cr_AppResProvider(11400): #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+[        ] I/cr_PolicyProvider(11400): #notifySettingsAvailable() 0
+[        ] I/cr_CombinedPProvider(11400): #onSettingsAvailable() 0
+[        ] I/cr_CombinedPProvider(11400): #flushPolicies()
+[  +53 ms] W/libc    (11400): Access denied finding property "ro.vendor.magt.mtk_magt_support"
+[  +48 ms] D/hw-ProcessState(11400): Binder ioctl to enable oneway spam detection failed: Invalid argument
+[        ] E/libEGL  (11400): pre_cache appList: ,,
+[   +1 ms] The Flutter DevTools debugger and profiler on 23030RAC7Y is available at:
+http://127.0.0.1:9101?uri=http://127.0.0.1:48011/40W7GA1JceM=/
+[   +5 ms] I/flutter (11400): Магазин доступен
+[   +1 ms] D/CompatibilityChangeReporter(11400): Compat change id reported: 214741472; UID 10531; state: ENABLED
+[   +6 ms] D/CompatibilityChangeReporter(11400): Compat change id reported: 171228096; UID 10531; state: ENABLED
+[ +103 ms] W/Looper  (11400): PerfMonitor doFrame : time=1ms vsyncFrame=0 latency=400ms procState=-1 historyMsgCount=2 (msgIndex=1
+wall=410ms seq=173 late=14ms h=com.google.android.gms.ads.internal.util.f c=com.google.android.gms.ads.internal.js.r)
+[  +40 ms] W/cr_media(11400): BLUETOOTH_CONNECT permission is missing.
+[   +4 ms] W/cr_media(11400): getBluetoothAdapter() requires BLUETOOTH permission
+[        ] W/cr_media(11400): registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+[   +5 ms] D/libMEOW (11400): meow new tls: 0xb400007d2e8b9780
+[        ] D/libMEOW (11400): applied 1 plugins for [info.memorizator]:
+[        ] D/libMEOW (11400):   plugin 1: [libMEOW_gift.so]: 0xb400007dcaeb9dc0
+[        ] D/libMEOW (11400): rebuild call chain: 0xb400007d36e006c0
+[  +16 ms] W/nfo.memorizator(11400): Accessing hidden field Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
+(unsupported, reflection, allowed)
+[  +51 ms] E/LB      (11400): fail to open file: No such file or directory
+[        ] E/LB      (11400): fail to open node: No such file or directory
+[        ] W/libc    (11400): Access denied finding property "ro.vendor.display.iris_x7.support"
+[        ] D/BLASTBufferQueue(11400): [SurfaceView[info.memorizator/info.memorizator.MainActivity]#1](f:0,a:1) acquireNextBufferLocked    
+size=1080x2270 mFrameNumber=1 applyTransaction=true mTimestamp=348187795706060(auto) mPendingTransactions.size=0
+graphicBufferId=48962627174400 transform=0
+[        ] D/VRI[MainActivity](11400): vri.Setup new sync=wmsSync-VRI[MainActivity]#2
+[   +6 ms] D/OpenGLRenderer(11400): makeCurrent grContext:0xb400007dc0eb2ee0 reset mTextureAvailable
+[  +34 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +27 ms] D/nfo.memorizator(11400): MiuiProcessManagerServiceStub setSchedFifo
+[        ] I/MiuiProcessManagerImpl(11400): setSchedFifo pid:11400, mode:3
+[   +1 ms] W/libc    (11400): Access denied finding property "ro.vendor.display.iris_x7.support"
+[        ] W/chromium(11400): [WARNING:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
+[  +13 ms] D/BLASTBufferQueue(11400): [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1
+applyTransaction=true mTimestamp=348187898300906(auto) mPendingTransactions.size=0 graphicBufferId=48962627174403 transform=0
+[   +1 ms] D/VRI[MainActivity](11400): vri.reportDrawFinished
+[  +29 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +61 ms] I/HandWritingStubImpl(11400): refreshLastKeyboardType: 1
+[   +1 ms] I/HandWritingStubImpl(11400): getCurrentKeyboardType: 1
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +1 ms] I/HandWritingStubImpl(11400): getCurrentKeyboardType: 1
+[  +69 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +42 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +10 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +8 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +16 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +28 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +6 ms] D/DecorView[](11400): getWindowModeFromSystem  windowmode is 1
+[   +5 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +2 ms] W/libc    (11400): Access denied finding property "ro.vendor.display.iris_x7.support"
+[        ] D/VRI[SignInHubActivity](11400): hardware acceleration = true, forceHwAccelerated = false
+[  +24 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +7 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] D/BufferQueueConsumer(11400): [](id:2c8800000002,api:0,p:-1,c:11400) connect: controlledByApp=false
+[        ] E/OpenGLRenderer(11400): Unable to match the desired swap behavior.
+[  +29 ms] D/VRI[SignInHubActivity](11400): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4370
+android.view.ViewRootImpl.doTraversal:2986 android.view.ViewRootImpl$TraversalRunnable.run:10423
+android.view.Choreographer$CallbackRecord.run:1679 android.view.Choreographer$CallbackRecord.run:1688 
+[   +1 ms] D/VRI[SignInHubActivity](11400): vri.Setup new sync=wmsSync-VRI[SignInHubActivity]#4
+[        ] D/OpenGLRenderer(11400): makeCurrent grContext:0xb400007dc0eb2ee0 reset mTextureAvailable
+[        ] D/BLASTBufferQueue(11400): [VRI[SignInHubActivity]#2](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1
+applyTransaction=true mTimestamp=348188235501830(auto) mPendingTransactions.size=0 graphicBufferId=48962627174405 transform=0
+[        ] D/VRI[SignInHubActivity](11400): vri.reportDrawFinished
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +18 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +15 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] W/AudioCapabilities(11400): Unsupported mime audio/x-adpcm-dvi-ima
+[        ] W/AudioCapabilities(11400): Unsupported mime audio/x-adpcm-dvi-ima
+[   +2 ms] W/AudioCapabilities(11400): Unsupported mime audio/x-adpcm-ms
+[        ] W/AudioCapabilities(11400): Unsupported mime audio/x-adpcm-ms
+[   +2 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +1 ms] W/AudioCapabilities(11400): Unsupported mime audio/alac
+[   +1 ms] W/AudioCapabilities(11400): Unsupported mime audio/alac
+[  +26 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +10 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +26 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +38 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +1 ms] W/VideoCapabilities(11400): Unsupported mime image/vnd.android.heic
+[        ] W/VideoCapabilities(11400): Unsupported mime image/vnd.android.heic
+[        ] D/CompatibilityChangeReporter(11400): Compat change id reported: 263076149; UID 10531; state: ENABLED
+[        ] W/VideoCapabilities(11400): Unsupported mime image/vnd.android.heic
+[        ] W/VideoCapabilities(11400): Unsupported mime image/vnd.android.heic
+[   +2 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +17 ms] W/VideoCapabilities(11400): Unrecognized profile/level 32768/256 for video/mp4v-es
+[        ] W/VideoCapabilities(11400): Unrecognized profile/level 32768/256 for video/mp4v-es
+[  +15 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +31 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +44 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +15 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +13 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +23 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +52 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +3 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +41 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +44 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +12 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +14 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +14 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +32 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +23 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +13 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +3 ms] I/Ads     (11400): JS: The jsLoaded GMSG has been sent
+(https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.html:796)
+[   +9 ms] I/chromium(11400): [INFO:CONSOLE(796)] "The jsLoaded GMSG has been sent", source:
+https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.html (796)
+[   +2 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +35 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +9 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +15 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +15 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +14 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +18 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +17 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +22 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +12 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +36 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[+1146 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +20 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +12 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[   +9 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[  +20 ms] I/FA      (11400): Application backgrounded at: timestamp_millis: 1731484207685
+[ +550 ms] D/ProfileInstaller(11400): Installing profile for info.memorizator
+[+1877 ms] D/CompatibilityChangeReporter(11400): Compat change id reported: 78294732; UID 10531; state: ENABLED
+[  +85 ms] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/base.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/split_config.ru.apk' with 1 weak references      
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~eeLJCB8LHLBgZr2UyyK74A==/com.google.android.webview-jqSwO4vcWn4jKMn3ga2zTw==/split_config.vi.apk' with 1 weak references      
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~dtMVZt7M3PtxDNjm8E7xYQ==/com.google.android.marvin.talkback-HJtk1dQaAJe7Q3GE-_pzwA==/base.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~dtMVZt7M3PtxDNjm8E7xYQ==/com.google.android.marvin.talkback-HJtk1dQaAJe7Q3GE-_pzwA==/split_config.arm64_v8a.apk' with 1 weak  
+references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~ycGXCO--_bB_nJO1J6431w==/cn.wps.moffice_eng-sH1HuaC-ZtFAENZ-hqg0SQ==/base.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~ycGXCO--_bB_nJO1J6431w==/cn.wps.moffice_eng-sH1HuaC-ZtFAENZ-hqg0SQ==/split_config.arm64_v8a.apk' with 1 weak references       
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~ycGXCO--_bB_nJO1J6431w==/cn.wps.moffice_eng-sH1HuaC-ZtFAENZ-hqg0SQ==/split_config.ru.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~ycGXCO--_bB_nJO1J6431w==/cn.wps.moffice_eng-sH1HuaC-ZtFAENZ-hqg0SQ==/split_config.xxhdpi.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~FUGLfGTaOHA6EiadRgz3xA==/com.google.android.apps.translate-U0cYkXNkx28f2sNQmS3U5A==/base.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~sht_jZV08UMZ6eu4ir9nkA==/com.yandex.searchapp-30BC-4kzqQGsc9ztOmjayQ==/base.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~sht_jZV08UMZ6eu4ir9nkA==/com.yandex.searchapp-30BC-4kzqQGsc9ztOmjayQ==/split_config.ru.apk' with 1 weak references
+[   +1 ms] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~sht_jZV08UMZ6eu4ir9nkA==/com.yandex.searchapp-30BC-4kzqQGsc9ztOmjayQ==/split_config.xxhdpi.apk' with 1 weak references        
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~EkI2pKdsYdb_zOT0mdDKow==/ru.yandex.translate-QUyyqa6A_ty6Y5-XvTx89A==/base.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~EkI2pKdsYdb_zOT0mdDKow==/ru.yandex.translate-QUyyqa6A_ty6Y5-XvTx89A==/split_config.arm64_v8a.apk' with 1 weak references      
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~EkI2pKdsYdb_zOT0mdDKow==/ru.yandex.translate-QUyyqa6A_ty6Y5-XvTx89A==/split_config.ru.apk' with 1 weak references
+[        ] W/nfo.memorizator(11400): ApkAssets: Deleting an ApkAssets object '<empty> and
+/data/app/~~EkI2pKdsYdb_zOT0mdDKow==/ru.yandex.translate-QUyyqa6A_ty6Y5-XvTx89A==/split_config.xxhdpi.apk' with 1 weak references
+[  +64 ms] I/flutter (11400): Ошибка входа в Google: PlatformException(sign_in_failed, com.google.android.gms.common.api.ApiException: 10:
+, null, null)
+[   +1 ms] W/libc    (11400): Access denied finding property "ro.vendor.display.iris_x7.support"
+[        ] W/MiuiStubRegistry(11400): Failed to collect stub providers in
+android.magicpointer.util.MiuiMagicPointerUtilsStubHeadManifest$$: /system_ext/framework/miui-framework-pointer-pad.jar not exist
+[  +32 ms] D/BLASTBufferQueue(11400): [VRI[SignInHubActivity]#2](f:0,a:1) destructor()
+[        ] D/BufferQueueConsumer(11400): [VRI[SignInHubActivity]#2(BLAST Consumer)2](id:2c8800000002,api:0,p:-1,c:11400) disconnect       
+[        ] I/HandWritingStubImpl(11400): refreshLastKeyboardType: 1
+[   +1 ms] I/HandWritingStubImpl(11400): getCurrentKeyboardType: 1
+[  +22 ms] W/nfo.memorizator(11400): remote service is not exist
+[        ] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[        ] W/WindowOnBackDispatcher(11400): sendCancelIfRunning:
+isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda22@66f4957
+[        ] D/View    (11400): [Warning] assignParent to null: this = DecorView@d8f26ca[SignInHubActivity]
+[+6389 ms] I/gralloc4(11400): @set_metadata: update dataspace from GM (0x00000000 -> 0x08010000)
+[ +478 ms] D/BLASTBufferQueue(11400): [SurfaceView[info.memorizator/info.memorizator.MainActivity]#1](f:0,a:1) destructor()
+[        ] D/BufferQueueConsumer(11400): [SurfaceView[info.memorizator/info.memorizator.MainActivity]#1(BLAST
+Consumer)1](id:2c8800000001,api:0,p:-1,c:11400) disconnect
+[  +17 ms] D/BLASTBufferQueue(11400): [VRI[MainActivity]#0](f:0,a:1) destructor()
+[   +1 ms] D/BufferQueueConsumer(11400): [VRI[MainActivity]#0(BLAST Consumer)0](id:2c8800000000,api:0,p:-1,c:11400) disconnect
+[ +941 ms] Service protocol connection closed.
+[        ] Lost connection to device.
+[        ] DevFS: Deleting filesystem on the device (file:///data/user/0/info.memorizator/code_cache/memorizatorEFXGSE/memorizator/)      
+[        ] DevFS: Deleted filesystem on the device (file:///data/user/0/info.memorizator/code_cache/memorizatorEFXGSE/memorizator/)       
+[   +2 ms] "flutter run" took 45 413ms.
+[ +289 ms] ensureAnalyticsSent: 162ms
+[        ] Running 2 shutdown hooks
+[   +7 ms] Shutdown hooks complete
+[   +2 ms] exiting with code 0

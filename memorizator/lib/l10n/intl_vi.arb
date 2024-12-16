@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "Hỗ trợ ứng dụng. Tắt quảng cáo.",
   "errorFunScanbarcode": "Lỗi hàm scanBarcode()",
   "enterPrice": "Nhập giá",
-  "note": "Ghi chú:"
+  "note": "Ghi chú:",
+  "thankYou": "Cảm ơn bạn đã hỗ trợ phát triển của chúng tôi! Sự đóng góp của bạn giúp chúng tôi tiếp tục cải thiện ứng dụng này.",
+  "processingYourPurchase": "Đang xử lý mua hàng của bạn...",
+  "errorInThePurchaseProcess": "Lỗi trong quá trình mua hàng.",
+  "thePurchaseIsCompleted": "Giao dịch mua hàng đã hoàn tất.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "Hãy tiếp tục ủng hộ chúng tôi. Đóng góp của bạn vô cùng quan trọng!",
+  "close": "Đóng",
+  "locationClarification": "Làm rõ vị trí",
+  "enterAddress": "Nhập địa chỉ",
+  "findOnMap": "Tìm trên bản đồ",
+  "chooseALocationOption": "Chọn một tùy chọn vị trí",
+  "saveLocation": "Lưu vị trí"
 }

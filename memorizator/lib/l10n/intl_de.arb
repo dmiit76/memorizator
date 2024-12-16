@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "Unterstützen Sie die Anwendung. Schalten Sie die Werbung ab.",
   "errorFunScanbarcode": "Fehler in Funktion scanBarcode()",
   "enterPrice": "Preis eingeben",
-  "note": "Hinweis:"
+  "note": "Hinweis:",
+  "thankYou": "Vielen Dank für Ihre Unterstützung unserer Entwicklung! Ihr Beitrag hilft uns, diese App weiter zu verbessern.",
+  "processingYourPurchase": "Ihr Kauf wird bearbeitet...",
+  "errorInThePurchaseProcess": "Fehler im Kaufprozess.",
+  "thePurchaseIsCompleted": "Der Kauf ist abgeschlossen.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "Unterstützen Sie uns weiterhin. Ihr Beitrag ist unglaublich wichtig!",
+  "close": "Schließen",
+  "locationClarification": "Standortklärung",
+  "enterAddress": "Adresse eingeben",
+  "findOnMap": "Auf der Karte suchen",
+  "chooseALocationOption": "Wählen Sie eine Standortoption",
+  "saveLocation": "Standort merken"
 }

@@ -23,6 +23,7 @@ class CalcRecAdapter extends TypeAdapter<CalcRec> {
       fields[11] as double,
       fields[12] as String,
       fields[2] as int,
+      fields[13] as String,
       codeName: fields[4] as String?,
       barcode: fields[5] as String?,
       latitude: fields[6] as double?,
@@ -36,7 +37,7 @@ class CalcRecAdapter extends TypeAdapter<CalcRec> {
   @override
   void write(BinaryWriter writer, CalcRec obj) {
     writer
-      ..writeByte(13)
+      ..writeByte(14)
       ..writeByte(0)
       ..write(obj.date)
       ..writeByte(1)
@@ -49,6 +50,8 @@ class CalcRecAdapter extends TypeAdapter<CalcRec> {
       ..write(obj.rating)
       ..writeByte(12)
       ..write(obj.comment)
+      ..writeByte(13)
+      ..write(obj.customName)
       ..writeByte(4)
       ..write(obj.codeName)
       ..writeByte(5)

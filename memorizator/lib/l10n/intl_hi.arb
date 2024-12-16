@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "एप्लिकेशन का समर्थन करें। विज्ञापन बंद करें।",
   "errorFunScanbarcode": "त्रुटि फ़ंक्शन scanBarcode()",
   "enterPrice": "मूल्य दर्ज करें",
-  "note": "टिप्पणी:"
+  "note": "टिप्पणी:",
+  "thankYou": "हमारे विकास का समर्थन करने के लिए धन्यवाद! आपका योगदान हमें इस ऐप को बेहतर बनाने में मदद करता है।",
+  "processingYourPurchase": "आपकी खरीदारी प्रक्रिया की जा रही है...",
+  "errorInThePurchaseProcess": "खरीद प्रक्रिया में त्रुटि.",
+  "thePurchaseIsCompleted": "खरीद पूरी हो गई है।",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "हमें समर्थन देते रहें। आपका योगदान अत्यंत महत्वपूर्ण है!",
+  "close": "बंद करें",
+  "locationClarification": "स्थान स्पष्टता",
+  "enterAddress": "पता दर्ज करें",
+  "findOnMap": "मानचित्र पर खोजें",
+  "chooseALocationOption": "एक स्थान विकल्प चुनें",
+  "saveLocation": "स्थान याद रखें"
 }

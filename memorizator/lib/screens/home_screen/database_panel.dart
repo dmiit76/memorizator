@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:memorizator/generated/l10n.dart';
 import 'package:memorizator/providers/info_provider.dart';
-import 'package:memorizator/providers/purchase_provider.dart';
 import 'package:memorizator/providers/settings_provider.dart';
 import 'package:memorizator/screens/home_screen/edit_record.dart';
 import 'package:memorizator/screens/home_screen/home_screen.dart';
@@ -118,130 +117,6 @@ class ListOfRecords extends StatelessWidget {
                                       (BuildContext context, double value, _) {
                                     return Column(
                                       children: [
-                                        // Row(
-                                        //   mainAxisAlignment:
-                                        //       MainAxisAlignment.spaceBetween,
-                                        //   children: [
-                                        //     Container(
-                                        //       alignment: Alignment.topLeft,
-                                        //       width: 75,
-                                        //       child: Column(
-                                        //         children: [
-                                        //           Text(
-                                        //             DateFormat('dd.MM.yyyy')
-                                        //                 .format(item.date),
-                                        //             style: const TextStyle(
-                                        //                 fontSize: 12),
-                                        //           ),
-                                        //           Text(
-                                        //             DateFormat('HH:mm')
-                                        //                 .format(item.date),
-                                        //             style: const TextStyle(
-                                        //                 fontSize: 12),
-                                        //           ),
-                                        //           IconsRecord(item: item),
-                                        //         ],
-                                        //       ),
-                                        //     ),
-                                        //     Flexible(
-                                        //       fit: FlexFit.tight,
-                                        //       child: GestureDetector(
-                                        //         onTap: () {
-                                        //           // Получаем экземпляр purchaseProvider до перехода
-                                        //           final purchaseProvider =
-                                        //               Provider.of<
-                                        //                       PurchaseProvider>(
-                                        //                   context,
-                                        //                   listen: false);
-
-                                        //           // Переходим на экран MemoryScreen
-                                        //           Navigator.push(
-                                        //             context,
-                                        //             MaterialPageRoute<void>(
-                                        //               builder: (BuildContext
-                                        //                   context) {
-                                        //                 // Загружаем межстраничную рекламу
-                                        //                 purchaseProvider
-                                        //                     .loadInterstitialAd();
-                                        //                 return MemoryScreen(
-                                        //                   snapshot: snapshot,
-                                        //                   index: index,
-                                        //                   list:
-                                        //                       item.listPhotoPath ??
-                                        //                           [],
-                                        //                 );
-                                        //               },
-                                        //             ),
-                                        //           ).then((_) {
-                                        //             // Показываем межстраничную рекламу при возврате
-                                        //             purchaseProvider
-                                        //                 .showInterstitialAd();
-                                        //           });
-                                        //         },
-                                        //         onLongPress: () {
-                                        //           editRecord(
-                                        //               context, infoProvider,
-                                        //               snapshot: snapshot,
-                                        //               i: index);
-                                        //         },
-                                        //         child: Container(
-                                        //           color: aLightGray,
-                                        //           child: Column(
-                                        //             crossAxisAlignment:
-                                        //                 CrossAxisAlignment
-                                        //                     .start,
-                                        //             children: [
-                                        //               Text(
-                                        //                 item.title,
-                                        //                 style: TextStyle(
-                                        //                   fontSize: settingsProvider
-                                        //                       .setFontSizeProduct,
-                                        //                   fontWeight:
-                                        //                       FontWeight.bold,
-                                        //                   color: aLightBlack,
-                                        //                 ),
-                                        //               ),
-                                        //               Text(
-                                        //                 infoProvider
-                                        //                     .textWeight(item),
-                                        //                 // infoProvider.textWeight(
-                                        //                 //     snapshot, index),
-                                        //                 style: const TextStyle(
-                                        //                   fontSize: 12,
-                                        //                   fontWeight:
-                                        //                       FontWeight.bold,
-                                        //                   color: aLightBlack,
-                                        //                 ),
-                                        //               ),
-                                        //             ],
-                                        //           ),
-                                        //         ),
-                                        //       ),
-                                        //     ),
-                                        //     Container(
-                                        //       color: aLightGray,
-                                        //       alignment: Alignment.centerRight,
-                                        //       width: settingsProvider
-                                        //           .setWidthColumn3,
-                                        //       child: Column(
-                                        //         crossAxisAlignment:
-                                        //             CrossAxisAlignment.end,
-                                        //         children: [
-                                        //           Text(
-                                        //             textAlign: TextAlign.right,
-                                        //             '${item.codeName}: ${NumberFormat(settingsProvider.setPriceFormat).format(item.price)}',
-                                        //           ),
-                                        //           Text(
-                                        //             textAlign: TextAlign.right,
-                                        //             infoProvider
-                                        //                 .stringConvertedItem(
-                                        //                     item.rateMap, item),
-                                        //           ),
-                                        //         ],
-                                        //       ),
-                                        //     ),
-                                        //   ],
-                                        // ),
                                         Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -271,18 +146,18 @@ class ListOfRecords extends StatelessWidget {
                                               fit: FlexFit.tight,
                                               child: GestureDetector(
                                                 onTap: () {
-                                                  final purchaseProvider =
-                                                      Provider.of<
-                                                              PurchaseProvider>(
-                                                          context,
-                                                          listen: false);
+                                                  // final purchaseProvider =
+                                                  //     Provider.of<
+                                                  //             PurchaseProvider>(
+                                                  //         context,
+                                                  //         listen: false);
 
                                                   Navigator.push(
                                                     context,
                                                     MaterialPageRoute<void>(
                                                       builder: (BuildContext
                                                           context) {
-                                                        purchaseProvider
+                                                        settingsProvider
                                                             .loadInterstitialAd();
                                                         return MemoryScreen(
                                                           snapshot: snapshot,
@@ -294,7 +169,7 @@ class ListOfRecords extends StatelessWidget {
                                                       },
                                                     ),
                                                   ).then((_) {
-                                                    purchaseProvider
+                                                    settingsProvider
                                                         .showInterstitialAd();
                                                   });
                                                 },
@@ -367,7 +242,6 @@ class ListOfRecords extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-
                                         Visibility(
                                           visible: (item.latitude +
                                                   item.longitude) !=

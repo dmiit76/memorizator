@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "ادعم التطبيق. أوقف الإعلانات.",
   "errorFunScanbarcode": "خطأ في دالة scanBarcode()",
   "enterPrice": "أدخل السعر",
-  "note": "ملاحظة"
+  "note": "ملاحظة",
+  "thankYou": "شكرًا لدعمكم تطويرنا! مساهمتكم تساعدنا على مواصلة تحسين هذا التطبيق.",
+  "processingYourPurchase": "جارٍ معالجة عملية الشراء الخاصة بك...",
+  "errorInThePurchaseProcess": "خطأ في عملية الشراء.",
+  "thePurchaseIsCompleted": "تم إتمام عملية الشراء.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "استمروا في دعمنا. مساهمتكم مهمة للغاية!",
+  "close": "إغلاق",
+  "locationClarification": "توضيح الموقع",
+  "enterAddress": "أدخل العنوان",
+  "findOnMap": "ابحث على الخريطة",
+  "chooseALocationOption": "اختر خيار الموقع",
+  "saveLocation": "حفظ الموقع"
 }

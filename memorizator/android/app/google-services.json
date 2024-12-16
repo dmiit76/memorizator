@@ -12,7 +12,24 @@
           "package_name": "info.memorizator"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "682020871596-36l3cuj3lbr7iueegje3joi78oi9mc4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.memorizator",
+            "certificate_hash": "99419a1748b244a9ab3e40e7c194fddd5d62fbcb"
+          }
+        },
+        {
+          "client_id": "682020871596-uu0nctscpvbbm9umcfp7slvhebjbct9n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.memorizator",
+            "certificate_hash": "a31ba354097f14820a4554905e558d9145e427ba"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBnZgOB9HQtBQ7NZq8_8F4-2ILCVw7rEPo"

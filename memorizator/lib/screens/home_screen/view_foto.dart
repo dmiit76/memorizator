@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:memorizator/generated/l10n.dart';
+import 'package:memorizator/screens/settings_screen/ad_manager.dart';
 import 'package:memorizator/services/constants.dart';
 
 class ViewFoto extends StatelessWidget {
@@ -22,13 +23,22 @@ class ViewFoto extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Expanded(
-              child: Image(
-                image: FileImage(
-                  File(image),
+              child: InteractiveViewer(
+                //minScale: 0.01,
+                maxScale: 14.0,
+                child: Image(
+                  image: FileImage(
+                    File(image),
+                  ),
                 ),
               ),
             ),
-            FittedBox(child: Text(image)),
+            // Visibility(
+            //     visible: !purchaseProvider.isPaidUser,
+            //     child: const SizedBox(
+            //       height: 8,
+            //     )), // Показываем баннер
+
             Visibility(
               visible: delete,
               child: Container(
@@ -46,7 +56,14 @@ class ViewFoto extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+            Visibility(
+                visible: delete,
+                child: const SizedBox(
+                  height: 30,
+                )), // Показываем баннер
+            const BannerAdWidgetAdaptive(), //  баннер
+            FittedBox(child: Text(image)),
           ],
         ),
       ),

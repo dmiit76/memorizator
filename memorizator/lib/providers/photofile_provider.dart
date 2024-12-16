@@ -69,27 +69,6 @@ class PhotofileProvider extends ChangeNotifier {
     }
   }
 
-  // Future<void> existFile(String dir) async {
-  //   bool result = await File(dir).exists();
-  //   if (result) {
-  //     //print('Файл есть: $dir');
-  //   } else {
-  //     //print('Фвйла НЕТУ! $dir');
-  //     Directory(dir);
-  //   }
-  // }
-
-  // existFileSync(String dir) {
-  //   bool result = File(dir).existsSync();
-  //   if (result) {
-  //     //print('Файл есть: $dir');
-  //     return true;
-  //   } else {
-  //     //print('Фвйла НЕТУ! $dir');
-  //     return false;
-  //   }
-  // }
-
   void clearListPhotoFiles() {
     listPhotoFiles.clear();
   }
@@ -105,11 +84,6 @@ class PhotofileProvider extends ChangeNotifier {
 
   Future<void> scanBarcode(bool work) async {
     try {
-      // Вызов сканера штрихкодов
-      // if (work) {
-      //   var result = await BarcodeScanner.scan();
-      //   barcodeResult = result.rawContent; // Сохраняем результат
-      // }
       var result = await BarcodeScanner.scan();
       barcodeResult = result.rawContent; // Сохраняем результат
       //barcodeResult = '1234567890';

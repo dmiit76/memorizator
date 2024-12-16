@@ -35,6 +35,7 @@ Future<dynamic> editRecord(BuildContext context, InfoProvider infoProvider,
         0.0, // rating
         infoProvider.noteController.text, // comment
         int.tryParse(infoProvider.weightController.text) ?? 0,
+        '', // customName
         codeName: settingsProvider.codeLocalCurrency,
         listPhotoPath: photoProvider.listPhotoFiles,
         barcode: photoProvider.barcodeResult,

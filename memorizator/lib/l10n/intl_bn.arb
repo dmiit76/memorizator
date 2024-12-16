@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "অ্যাপ্লিকেশনটি সমর্থন করুন। বিজ্ঞাপন বন্ধ করুন।",
   "errorFunScanbarcode": "ত্রুটি ফাংশন scanBarcode()",
   "enterPrice": "মূল্য লিখুন",
-  "note": "নোট:"
+  "note": "নোট:",
+  "thankYou": "আমাদের উন্নয়নে আপনার সমর্থনের জন্য ধন্যবাদ! আপনার অবদান এই অ্যাপটি উন্নত করতে আমাদের সাহায্য করে।",
+  "processingYourPurchase": "আপনার ক্রয় প্রক্রিয়া করা হচ্ছে...",
+  "errorInThePurchaseProcess": "ক্রয় প্রক্রিয়ায় ত্রুটি.",
+  "thePurchaseIsCompleted": "ক্রয় সম্পন্ন হয়েছে।",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "আমাদের সমর্থন চালিয়ে যান। আপনার অবদান অত্যন্ত মূল্যবান!",
+  "close": "বন্ধ করুন",
+  "locationClarification": "অবস্থান স্পষ্টীকরণ",
+  "enterAddress": "ঠিকানা লিখুন",
+  "findOnMap": "মানচিত্রে খুঁজুন",
+  "chooseALocationOption": "একটি অবস্থান অপশন বাছুন",
+  "saveLocation": "অবস্থান স্মরণ করুন"
 }

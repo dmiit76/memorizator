@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:loader_overlay/loader_overlay.dart';
@@ -27,18 +28,11 @@ void main() async {
   runZonedGuarded<Future<void>>(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
+      await dotenv.load(fileName: '.env'); // Загрузка .env файла
       await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform,
       );
       FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
-      // InAppPurchase.instance.isAvailable().then((available) {
-      //   if (available) {
-      //     print('Магазин настроен');
-      //   } else {
-      //     print('Магазин не доступен');
-      //     // Магазин недоступен, обработайте соответствующим образом
-      //   }
-      // });
 
       // Initialize SharedPreferences
       await SharedPreferences.getInstance();
@@ -66,16 +60,18 @@ class Memorizator extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => PurchaseProvider(),
-          lazy: false,
-        ),
-        ChangeNotifierProvider(
           create: (context) => SettingsProvider(context),
           lazy: false,
         ),
+        ChangeNotifierProvider(
+          create: (_) => PurchaseProvider(context),
+          //lazy: false,
+        ),
         ChangeNotifierProvider(create: (context) => PhotofileProvider(context)),
         ChangeNotifierProvider(
-            create: (context) => InfoProvider(context), lazy: false),
+          create: (context) => InfoProvider(context),
+          //lazy: false,
+        ),
         ChangeNotifierProvider(create: (context) => TopPanelProvider()),
       ],
       child: Consumer<SettingsProvider>(

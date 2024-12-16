@@ -40,6 +40,11 @@ class InfoProvider extends ChangeNotifier {
     //getFilteredItems();
   }
 
+  void setPlace(value) {
+    place = value;
+    notifyListeners();
+  }
+
   // Получаем сохраненный курс
   Future getCurrency() async {
     //titleItems = 'last_records';
@@ -157,6 +162,7 @@ class InfoProvider extends ChangeNotifier {
         0.0, // rating
         noteController.text, // comment
         int.tryParse(weightController.text) ?? 0,
+        '', // customName
         codeName: settingsFileProvider.codeLocalCurrency,
         listPhotoPath: photoFileProvider.listPhotoFiles,
         barcode: photoFileProvider.barcodeResult,

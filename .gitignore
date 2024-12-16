@@ -1,1 +1,11 @@
-в
+memorizator/android/keystore.properties
+memorizator/android/app/client_secret_682020871596-36l3cuj3lbr7iueegje3joi78oi9mc4i.apps.googleusercontent.com.json
+memorizator/android/app/degug_client_secret_682020871596-uu0nctscpvbbm9umcfp7slvhebjbct9n.apps.googleusercontent.com
+memorizator/android/app/google-services.json
+memorizator/android/app/memorizator-upload-keystore.jks
+memorizator/android/app/memorizator-upload-keystore.jks.old
+memorizator/lib/generated/
+memorizator/linux/flutter/
+memorizator/macos/Flutter/
+memorizator/windows/flutter/
+memorizator/.env

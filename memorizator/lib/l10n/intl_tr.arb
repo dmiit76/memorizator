@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "Uygulamayı destekleyin. Reklamları kapatın.",
   "errorFunScanbarcode": "scanBarcode() fonksiyonunda hata",
   "enterPrice": "Fiyat girin",
-  "note": "Not:"
+  "note": "Not:",
+  "thankYou": "Gelişimimizi desteklediğiniz için teşekkür ederiz! Katkınız bu uygulamayı iyileştirmemize yardımcı oluyor.",
+  "processingYourPurchase": "Satın almanız işleniyor...",
+  "errorInThePurchaseProcess": "Satın alma işleminde hata.",
+  "thePurchaseIsCompleted": "Satın alma tamamlandı.",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "Bizi desteklemeye devam edin. Katkınız inanılmaz derecede önemli!",
+  "close": "Kapat",
+  "locationClarification": "Konum Açıklaması",
+  "enterAddress": "Adresi girin",
+  "findOnMap": "Haritada bul",
+  "chooseALocationOption": "Bir konum seçeneği seçin",
+  "saveLocation": "Konumu kaydet"
 }

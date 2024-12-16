@@ -50,19 +50,19 @@ enum DonationStatus {
 //ca-app-pub-3940256099942544/6300978111, // Тестовый ID
 //Тестовый ID межстраничного показа
 //ca-app-pub-3940256099942544/1033173712, // Тестовый ID
-class AdMobConstants {
-  static const String memorizatorAdMobID =
-      'ca-app-pub-3940256099942544~3347511713';
-  static const String memorizatorBannerAd =
-      'ca-app-pub-3940256099942544/6300978111';
-  static const String memorizatorBannerAdPage =
-      'ca-app-pub-3940256099942544/1033173712';
-  static const String memorizatorAdMobIDiOS =
-      'ca-app-pub-3940256099942544~1458002511';
-  static const String memorizatorBannerAdiOS =
-      'ca-app-pub-3940256099942544/2934735716';
-  static const String memorizatorBannerAdPageiOS =
-      'ca-app-pub-3940256099942544/4411468910';
+// class AdMobConstants {
+//   static const String memorizatorAdMobID =
+//       'ca-app-pub-3940256099942544~3347511713';
+//   static const String memorizatorBannerAd =
+//       'ca-app-pub-3940256099942544/6300978111';
+//   static const String memorizatorBannerAdPage =
+//       'ca-app-pub-3940256099942544/1033173712';
+//   static const String memorizatorAdMobIDiOS =
+//       'ca-app-pub-3940256099942544~1458002511';
+//   static const String memorizatorBannerAdiOS =
+//       'ca-app-pub-3940256099942544/2934735716';
+//   static const String memorizatorBannerAdPageiOS =
+//       'ca-app-pub-3940256099942544/4411468910';
 
   // Добавь другие идентификаторы по необходимости
-}
+// }

@@ -1,38 +1,41 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:memorizator/providers/purchase_provider.dart';
-import 'package:memorizator/services/constants.dart';
+import 'package:memorizator/providers/settings_provider.dart';
 import 'package:provider/provider.dart';
 
 class AdManager {
   late BannerAd _bannerAd;
   bool isBannerAdReady = false;
-
   late InterstitialAd? _interstitialAd;
   bool isInterstitialAdReady = false;
 
-  // Метод для загрузки баннера
-  void loadBannerAd() {
-    _bannerAd = BannerAd(
-      adUnitId: Platform.isAndroid
-          ? AdMobConstants.memorizatorBannerAd
-          : AdMobConstants.memorizatorBannerAdiOS, // баннер
-      request: const AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
-        onAdLoaded: (_) {
-          isBannerAdReady = true;
-        },
-        onAdFailedToLoad: (ad, error) {
-          //print('Ошибка загрузки баннера: $error');
-          ad.dispose();
-        },
-      ),
-    );
-    _bannerAd.load();
-  }
+  // // Метод для загрузки баннера
+  // void loadBannerAd() {
+  //   settingsProvider = Provider.of<SettingsProvider>(context)
+  //   _bannerAd = BannerAd(
+  //     adUnitId: Platform.isAndroid
+  //         ? settingsProvider.memorizatorBannerAd
+  //         : settingsProvider.memorizatorBannerAdiOS, // баннер
+  //     //   adUnitId: Platform.isAndroid
+  //     // ? AdMobConstants.memorizatorBannerAd
+  //     // : AdMobConstants.memorizatorBannerAdiOS, // баннер
+
+  //     request: const AdRequest(),
+  //     size: AdSize.banner,
+  //     listener: BannerAdListener(
+  //       onAdLoaded: (_) {
+  //         isBannerAdReady = true;
+  //       },
+  //       onAdFailedToLoad: (ad, error) {
+  //         //print('Ошибка загрузки баннера: $error');
+  //         ad.dispose();
+  //       },
+  //     ),
+  //   );
+  //   _bannerAd.load();
+  // }
 
   // Возвращаем баннер для показа в UI
   BannerAd get bannerAd => _bannerAd;
@@ -44,11 +47,10 @@ class AdManager {
   // Межстраничная реклама
   bool _isInterstitialAdLoaded = false;
 
-  void loadInterstitialAd() {
+  void loadInterstitialAd(String adUnitId) {
+    // Загрузка межстраничной рекламы
     InterstitialAd.load(
-      adUnitId: Platform.isAndroid
-          ? AdMobConstants.memorizatorBannerAdPage
-          : AdMobConstants.memorizatorBannerAdPageiOS, // межстраничный
+      adUnitId: adUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
@@ -64,12 +66,12 @@ class AdManager {
     );
   }
 
-  void showInterstitialAd() {
+  void showInterstitialAd(String adUnitId) {
     if (_isInterstitialAdLoaded && _interstitialAd != null) {
       _interstitialAd!.show();
       _interstitialAd = null;
       _isInterstitialAdLoaded = false;
-      loadInterstitialAd(); // Загружаем следующую рекламу после показа
+      loadInterstitialAd(adUnitId); // Загружаем следующую рекламу после показа
     } else {
       //print('Межстраничная реклама ещё не загружена.');
     }
@@ -80,35 +82,53 @@ class AdManager {
   }
 }
 
-class BannerAdWidget extends StatelessWidget {
-  final Future<BannerAd> _bannerAdFuture = Future(() {
-    final BannerAd bannerAd = BannerAd(
-      adUnitId: Platform.isAndroid
-          ? AdMobConstants.memorizatorBannerAd
-          : AdMobConstants.memorizatorBannerAdiOS, // Баннер
-      request: const AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
-        onAdLoaded: (_) {
-          //print('Тестовый баннер загружен');
-        },
-        onAdFailedToLoad: (ad, error) {
-          //print('Ошибка загрузки баннера: $error');
-          ad.dispose();
-        },
-      ),
-    );
-    bannerAd.load();
-    return bannerAd;
-  });
+class BannerAdWidget extends StatefulWidget {
+  const BannerAdWidget({super.key});
 
-  BannerAdWidget({super.key});
+  @override
+  State<BannerAdWidget> createState() => _BannerAdWidgetState();
+}
+
+class _BannerAdWidgetState extends State<BannerAdWidget> {
+  late Future<BannerAd> _bannerAdFuture;
+  late String adUnitId;
+  @override
+  void initState() {
+    super.initState();
+    final settingsProvider =
+        Provider.of<SettingsProvider>(context, listen: false);
+    final adUnitId = Platform.isAndroid
+        ? settingsProvider.memorizatorBannerAd
+        : settingsProvider.memorizatorBannerAdiOS;
+    _bannerAdFuture = Future(() {
+      final BannerAd bannerAd = BannerAd(
+        adUnitId: adUnitId, // Баннер
+        // adUnitId: Platform.isAndroid
+        //     ? AdMobConstants.memorizatorBannerAd
+        //     : AdMobConstants.memorizatorBannerAdiOS, // Баннер
+        request: const AdRequest(),
+        size: AdSize.banner,
+        listener: BannerAdListener(
+          onAdLoaded: (_) {
+            //print('Тестовый баннер загружен');
+          },
+          onAdFailedToLoad: (ad, error) {
+            //print('Ошибка загрузки баннера: $error');
+            ad.dispose();
+          },
+        ),
+      );
+      bannerAd.load();
+      return bannerAd;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final purchaseProvider = Provider.of<PurchaseProvider>(context);
+
     // если пользователь купил любой донат, не показываем рекламу!
-    if (purchaseProvider.userDonationStatus != DonationStatus.none) {
+    if (purchaseProvider.isPaidUser) {
       // Пользователь уже совершил пожертвование, поэтому выходим и не показываем баннер
       return const SizedBox.shrink(); // Возвращаем пустой виджет
     }
@@ -138,16 +158,23 @@ class BannerAdWidgetAdaptive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //print('Ширина пространства: ${MediaQuery.of(context).size.width.toInt()}');
     final purchaseProvider = Provider.of<PurchaseProvider>(context);
+    final settingsProvider =
+        Provider.of<SettingsProvider>(context, listen: false);
     // если пользователь купил любой донат, не показываем рекламу!
-    if (purchaseProvider.userDonationStatus != DonationStatus.none) {
+    if (purchaseProvider.isPaidUser) {
       // Пользователь уже совершил пожертвование, поэтому выходим и не показываем баннер
       return const SizedBox.shrink(); // Возвращаем пустой виджет
     }
     // Используем FutureBuilder для получения адаптивного размера баннера
+
     return FutureBuilder<AnchoredAdaptiveBannerAdSize?>(
       future: AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-        MediaQuery.of(context).size.width.toInt(),
+        MediaQuery.of(context).size.width.toInt() -
+            ((MediaQuery.of(context).orientation == Orientation.portrait)
+                ? 0
+                : 33),
       ),
       builder: (context, adSizeSnapshot) {
         if (adSizeSnapshot.connectionState == ConnectionState.done &&
@@ -155,14 +182,14 @@ class BannerAdWidgetAdaptive extends StatelessWidget {
           final AnchoredAdaptiveBannerAdSize? adSize = adSizeSnapshot.data;
 
           if (adSize == null) {
-            return BannerAdWidget(); // если не можем получить размер экрана, выводим неадаптивный баннер
+            return const BannerAdWidget(); // если не можем получить размер экрана, выводим неадаптивный баннер
           }
 
           // После получения размера создаём баннер
           final BannerAd bannerAd = BannerAd(
             adUnitId: Platform.isAndroid
-                ? AdMobConstants.memorizatorBannerAd
-                : AdMobConstants.memorizatorBannerAdiOS, // баннер
+                ? settingsProvider.memorizatorBannerAd
+                : settingsProvider.memorizatorBannerAdiOS, // баннер
             size: adSize,
             request: const AdRequest(),
             listener: BannerAdListener(
@@ -170,7 +197,7 @@ class BannerAdWidgetAdaptive extends StatelessWidget {
                 //print('Адаптивный баннер загружен');
               },
               onAdFailedToLoad: (ad, error) {
-                //print('Ошибка загрузки адаптивного баннера: $error');
+                //print('Ошибка загрузки адаптивного банннера: $error');
                 ad.dispose();
               },
             ),

@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "支持应用程序。关闭广告。",
   "errorFunScanbarcode": "错误函数 scanBarcode()",
   "enterPrice": "输入价格",
-  "note": "注释:"
+  "note": "注释:",
+  "thankYou": "感谢您支持我们的发展！您的贡献帮助我们继续改进这款应用。",
+  "processingYourPurchase": "正在处理您的购买...",
+  "errorInThePurchaseProcess": "购买过程中出错。",
+  "thePurchaseIsCompleted": "购买已完成。",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "继续支持我们。您的贡献极其重要！",
+  "close": "关闭",
+  "locationClarification": "位置澄清",
+  "enterAddress": "请输入地址",
+  "findOnMap": "在地图上查找",
+  "chooseALocationOption": "选择一个位置选项",
+  "saveLocation": "保存位置"
 }

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:memorizator/logger.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:memorizator/providers/purchase_provider.dart';
 import 'package:memorizator/providers/toppanel_provider.dart';
+import 'package:memorizator/screens/settings_screen/ad_manager.dart';
 import 'package:memorizator/services/constants.dart';
 import 'package:provider/provider.dart';
 import 'control_panel.dart';
 import 'database_panel.dart';
 import 'info_panel.dart';
 import 'top_panel.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+//import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 final ValueNotifier<double> refreshList = ValueNotifier(0);
 final ValueNotifier<double> fontSize = ValueNotifier(16.0);
@@ -29,9 +31,7 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _initializeApp() async {
-    logAsyncOperation("Starting Ads initialization");
     await MobileAds.instance.initialize();
-    logAsyncOperation("Ads initialization completed");
   }
 
   @override
@@ -67,7 +67,10 @@ class HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 15),
                   const DatabasePanel(),
-                  //const BannerAdWidgetAdaptive(),
+                  Visibility(
+                    visible: !context.read<PurchaseProvider>().isPaidUser,
+                    child: const BannerAdWidgetAdaptive(),
+                  ),
                 ],
               ),
             ),

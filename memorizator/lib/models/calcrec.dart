@@ -20,10 +20,13 @@ class CalcRec {
   double price; // цена в местной валюте
 
   @HiveField(11)
-  double rating; // цена в местной валюте
+  double rating = 0.0; //рейтинг пользователя для товара
 
   @HiveField(12)
-  String comment; // продукт
+  String comment = ''; // продукт
+
+  @HiveField(13)
+  String customName = ''; // название магазина/салона/кафе где был товар
 
   @HiveField(4)
   String? codeName; // буквенный код валюты
@@ -38,7 +41,7 @@ class CalcRec {
   double? longitude; // долгота  геопозиция места сохранения
 
   @HiveField(10)
-  String? place; // долгота  геопозиция места сохранения
+  String? place; // Текстовое представление адреса места
 
   @HiveField(8)
   List<String>? listPhotoPath; // ссылка на фото в галерее
@@ -46,8 +49,8 @@ class CalcRec {
   @HiveField(9)
   Map<String, double>? rateMap; // список активных валют на момент записи
 
-  CalcRec(
-      this.date, this.title, this.price, this.rating, this.comment, this.weight,
+  CalcRec(this.date, this.title, this.price, this.rating, this.comment,
+      this.weight, this.customName,
       {this.codeName,
       this.barcode,
       this.latitude,

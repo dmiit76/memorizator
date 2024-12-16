@@ -52,5 +52,16 @@
   "supportTheApplicationTurnOffTheAds": "アプリケーションをサポートしてください。広告をオフにしてください。",
   "errorFunScanbarcode": "エラー関数 scanBarcode()",
   "enterPrice": "価格を入力",
-  "note": "注釈:"
+  "note": "注釈:",
+  "thankYou": "私たちの開発を支援してくれてありがとうございます！あなたの貢献がこのアプリを改善し続けるのに役立ちます。",
+  "processingYourPurchase": "購入を処理中です...",
+  "errorInThePurchaseProcess": "購入プロセスにエラーが発生しました。",
+  "thePurchaseIsCompleted": "購入が完了しました。",
+  "continueToSupportUsYourContributionIsIncrediblyImportant": "引き続き私たちをサポートしてください。あなたの貢献は非常に重要です！",
+  "close": "閉じる",
+  "locationClarification": "位置の明確化",
+  "enterAddress": "住所を入力してください",
+  "findOnMap": "地図で探す",
+  "chooseALocationOption": "ロケーションオプションを選択",
+  "saveLocation": "ロケーションを保存"
 }

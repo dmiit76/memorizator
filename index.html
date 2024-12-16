@@ -4,10 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Memorizator</title>
+    <style>
+        .language-select {
+            margin-top: 10px;
+        }
+        .content {
+            display: none;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+            document.getElementById(`content-${lang}`).style.display = 'block';
+        }
+    </script>
 </head>
-<body>
-    <h1>Welcome to Memorizator</h1>
-    <p>This is the homepage of the Memorizator application.</p>
-    <a href="privacy.html">Privacy Policy</a>
+<body onload="switchLanguage('en')">
+    <div class="language-select">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('ru')">Русский</button>
+    </div>
+
+    <!-- English Content -->
+    <div id="content-en" class="content">
+        <h1>Welcome to Memorizator</h1>
+        <p>This is the homepage of the Memorizator application.</p>
+        <a href="privacy.html">Privacy Policy</a>
+
+        <h2>Description</h2>
+        <p>Memorizator is an app designed to remember various information such as purchases, events, and notes. It's a tool that helps users organize their information in one place.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Save purchase details, including date, price, and location.</li>
+            <li>Add photos to records.</li>
+            <li>Organize notes and reminders.</li>
+            <li>View history of purchases and events.</li>
+        </ul>
+
+        <h2>How to Use</h2>
+        <ol>
+            <li>Download and install the app on your device.</li>
+            <li>Create an account or use the app anonymously.</li>
+            <li>Start adding information using the add buttons on the main screen.</li>
+            <li>Use the search function to quickly access your records.</li>
+        </ol>
+
+        <h2>Technologies</h2>
+        <p>Memorizator uses the following technologies:</p>
+        <ul>
+            <li>Flutter for mobile app development.</li>
+            <li>Firebase for data storage and user authentication.</li>
+            <li>GitHub Pages for hosting the static project webpage.</li>
+        </ul>
+
+        <h2>License</h2>
+        <p>Memorizator is distributed under the MIT license, allowing users to freely use, modify, and distribute it for personal and commercial purposes with attribution.</p>
+
+        <h2>Contact Information</h2>
+        <p>If you have questions or suggestions, please contact me at: <a href="mailto:memorizator555@gmail.com">memorizator555@gmail.com</a></p>
+    </div>
+
+    <!-- Russian Content -->
+    <div id="content-ru" class="content">
+        <h1>Добро пожаловать в Memorizator</h1>
+        <p>Это главная страница приложения Memorizator.</p>
+        <a href="privacy.html">Политика конфиденциальности</a>
+
+        <h2>Описание</h2>
+        <p>Memorizator - это приложение, предназначенное для запоминания различной информации, такой как покупки, события и заметки. Это инструмент, который помогает пользователям организовать их информацию в одном месте.</p>
+
+        <h2>Функциональность</h2>
+        <ul>
+            <li>Сохранять детали покупок, включая дату покупки, цену и место.</li>
+            <li>Добавлять фотографии к записям.</li>
+            <li>Организовывать заметки и напоминания.</li>
+            <li>Просматривать историю покупок и событий.</li>
+        </ul>
+
+        <h2>Как использовать</h2>
+        <ol>
+            <li>Скачайте и установите приложение на свое устройство.</li>
+            <li>Создайте учетную запись или используйте приложение анонимно.</li>
+            <li>Начните добавлять информацию, используя кнопки добавления на главном экране.</li>
+            <li>Используйте функцию поиска для быстрого доступа к вашим записям.</li>
+        </ol>
+
+        <h2>Технологии</h2>
+        <p>Memorizator использует следующие технологии:</p>
+        <ul>
+            <li>Flutter для создания мобильного приложения.</li>
+            <li>Firebase для хранения данных и аутентификации пользователей.</li>
+            <li>GitHub Pages для хостинга статической веб-страницы проекта.</li>
+        </ul>
+
+        <h2>Лицензия</h2>
+        <p>Memorizator распространяется под лицензией MIT, что позволяет пользователям свободно использовать, изменять и распространять его в личных и коммерческих целях при условии указания авторства.</p>
+
+        <h2>Контактная информация</h2>
+        <p>Если у вас есть вопросы или предложения, пожалуйста, свяжитесь со мной по электронной почте: <a href="mailto:memorizator555@gmail.com">memorizator555@gmail.com</a></p>
+    </div>
 </body>
 </html>

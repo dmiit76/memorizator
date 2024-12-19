@@ -36,6 +36,40 @@ class PurchaseProvider extends ChangeNotifier {
   List<ProductDetails> _products = [];
   List<ProductDetails> get products => _products;
 
+  double noGoogleDonateValue = 2; // положение ползунка слайдера по умолчанию
+  int donationValue = 3; // развер пожертвования по умолчанию 3$
+  Future inputNoGoogleDonateValue(double noGoogleDonateValue) async {
+    //print(noGoogleDonateValue);
+    switch (noGoogleDonateValue) {
+      case 1:
+        {
+          donationValue = 1;
+        }
+        break;
+      case 2:
+        {
+          donationValue = 3;
+        }
+        break;
+      case 3:
+        {
+          donationValue = 5;
+        }
+        break;
+      case 4:
+        {
+          donationValue = 10;
+        }
+        break;
+
+      default:
+        {
+          donationValue = 1;
+        }
+    }
+    notifyListeners();
+  }
+
   String purchaseMessage = '';
   Map mapPurchaseMessage = {
     'progress': 'Processing your purchase...',

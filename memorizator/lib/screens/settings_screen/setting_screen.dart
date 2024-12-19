@@ -6,7 +6,6 @@ import 'package:memorizator/providers/purchase_provider.dart';
 import 'package:memorizator/providers/settings_provider.dart';
 import 'package:memorizator/screens/settings_screen/ad_manager.dart';
 import 'package:memorizator/screens/settings_screen/instruction.dart';
-import 'package:memorizator/screens/settings_screen/purchase_screen.dart';
 import 'package:memorizator/services/constants.dart';
 import 'package:provider/provider.dart';
 
@@ -304,8 +303,15 @@ class _SettingScreenState extends State<SettingScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const PurchaseScreen()),
+                            builder: (context) => settingsProvider
+                                .getScreen(settingsProvider.purchScreen),
+                          ),
                         );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => const PurchaseScreen()),
+                        // );
                       },
                       child: const Icon(Icons.shopping_cart_outlined)),
                 ),
@@ -327,7 +333,7 @@ class _SettingScreenState extends State<SettingScreen> {
               trailing: CupertinoSwitch(
                 onLabelColor: aWhite,
                 thumbColor: aBlue,
-                activeColor: aWhite,
+                activeTrackColor: aWhite,
                 value: (settingsProvider.setClearResult ? true : false),
                 onChanged: (bool value) {
                   settingsProvider.setClearResult = value;
@@ -352,7 +358,7 @@ class _SettingScreenState extends State<SettingScreen> {
               trailing: CupertinoSwitch(
                 onLabelColor: aWhite,
                 thumbColor: aBlue,
-                activeColor: aWhite,
+                activeTrackColor: aWhite,
                 value: settingsProvider.setFrameDigit,
                 onChanged: (bool value) {
                   settingsProvider.setFrameDigit = value;

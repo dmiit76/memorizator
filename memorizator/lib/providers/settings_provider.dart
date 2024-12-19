@@ -11,6 +11,8 @@ import 'package:loader_overlay/loader_overlay.dart';
 import 'package:memorizator/generated/intl/messages_all.dart';
 import 'package:memorizator/models/calcrec.dart';
 import 'package:memorizator/screens/settings_screen/ad_manager.dart';
+import 'package:memorizator/screens/settings_screen/purchase_no_google.dart';
+import 'package:memorizator/screens/settings_screen/purchase_screen.dart';
 import 'package:memorizator/services/constants.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
@@ -56,6 +58,19 @@ class SettingsProvider extends ChangeNotifier {
 
   final remoteConfig = FirebaseRemoteConfig.instance;
   bool _testMode = true; // Храним значение конфигурации
+  String _purchScreen = "PurchaseScreen";
+  String get purchScreen => _purchScreen;
+// Фабричные функции для экранов
+  final Map<String, Widget Function()> screenBuilders = {
+    'PurchaseScreen': () => const PurchaseScreen(),
+    'PurchaseNoGoogle': () => const PurchaseNoGoogle(),
+  };
+
+  Widget getScreen(String screenName) {
+    // Возвращает виджет по ключу или экран-заглушку
+    return screenBuilders[screenName]?.call() ?? const PurchaseScreen();
+  }
+
   double _percentAdPage = 30.0;
   bool get testMode => _testMode;
   String memorizatorAdMobID = 'ca-app-pub-3940256099942544~3347511713';
@@ -87,12 +102,18 @@ class SettingsProvider extends ChangeNotifier {
       // Сохраняем её в памяти
       await prefs.setBool('testmode', _testMode);
 
+      // Читаем значение переменной purchScreen (экран донатов)
+      _purchScreen = remoteConfig.getString('purchScreen');
+      // Сохраняем её в памяти
+      await prefs.setString('purchscreen', _purchScreen);
+
       // Уведомляем всех слушателей, что данные обновились
       notifyListeners();
     } catch (e) {
       //print('Error fetching remote config: $e');
       // Если не удается получить из Firebase, читаем сохраненную в настройках
       _testMode = prefs.getBool('testmode') ?? false;
+      _purchScreen = prefs.getString('purchscreen') ?? 'PurchaseScreen';
     }
     if (testMode) {
       memorizatorAdMobID = 'ca-app-pub-3940256099942544~3347511713';

@@ -1,0 +1,109 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+class PaymentService {
+  late final String _merchantId;
+  late final String _masterKey;
+
+  PaymentService() {
+    _initializeConfig();
+  }
+
+  Future<void> _initializeConfig() async {
+    final config = await RemoteConfigService.fetchPaymentConfig();
+    _merchantId = config['merchantId']!;
+    _masterKey = config['masterKey']!;
+  }
+
+  Future<void> processPayeerPayment(BuildContext context, String orderId, double amount) async {
+    final prefs = await SharedPreferences.getInstance();
+
+    try {
+      // Обновляем виджет статуса
+      _updateStatus(context, "Инициализация платежа...");
+
+      // Отправка запроса на Payeer
+      final response = await http.post(
+        Uri.parse('https://payeer.com/api/merchant/payment.php'),
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: {
+          'm_shop': _merchantId,
+          'm_orderid': orderId,
+          'm_amount': amount.toStringAsFixed(2),
+          'm_curr': 'USD',
+          'm_desc': base64Encode(utf8.encode('Оплата через приложение')), 
+          'm_sign': _generateSign(orderId, amount, _masterKey),
+        },
+      );
+
+      if (response.statusCode == 200) {
+        final result = jsonDecode(response.body);
+        final paymentStatus = result['status'] ?? 'unknown';
+        final paymentMessage = result['message'] ?? 'Нет сообщения';
+
+        // Сохранение данных в SharedPreferences
+        await prefs.setString('last_order_id', orderId);
+        await prefs.setString('last_payment_status', paymentStatus);
+        await prefs.setString('last_payment_message', paymentMessage);
+
+        _updateStatus(context, "Платеж завершен: $paymentMessage");
+      } else {
+        _updateStatus(context, "Ошибка соединения с Payeer.");
+      }
+    } catch (e) {
+      _updateStatus(context, "Ошибка выполнения: $e");
+    }
+  }
+
+String _generateSign(String orderId, double amount, String masterKey) {
+  final data = '$_merchantId;$orderId;${amount.toStringAsFixed(2)};USD;${base64Encode(utf8.encode('Оплата через приложение'))};$masterKey';
+  
+  // Используем SHA-256 для создания подписи
+  final bytes = utf8.encode(data);
+  final digest = sha256.convert(bytes);
+
+  return digest.toString();
+}
+
+
+  void _updateStatus(BuildContext context, String message) {
+    final snackBar = SnackBar(content: Text(message));
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+}
+
+class RemoteConfigService {
+  static Future<Map<String, String>> fetchPaymentConfig() async {
+    final remoteConfig = FirebaseRemoteConfig.instance;
+
+    try {
+      await remoteConfig.setConfigSettings(
+        RemoteConfigSettings(
+          fetchTimeout: const Duration(seconds: 10),
+          minimumFetchInterval: const Duration(hours: 1),
+        ),
+      );
+
+      await remoteConfig.fetchAndActivate();
+
+      final encryptedMerchantId = remoteConfig.getString('merchantId');
+      final encryptedMasterKey = remoteConfig.getString('masterKey');
+
+      // Получение симметричного ключа с Firebase
+      final secretKey = remoteConfig.getString('secretKey');
+
+      // Расшифровка ключей с использованием полученного ключа
+      final merchantId = SecurityService.decryptKey(encryptedMerchantId, secretKey);
+      final masterKey = SecurityService.decryptKey(encryptedMasterKey, secretKey);
+
+      return {
+        'merchantId': merchantId,
+        'masterKey': masterKey,
+      };
+    } catch (e) {
+      throw Exception("Ошибка загрузки данных: $e");
+    }
+  }
+}

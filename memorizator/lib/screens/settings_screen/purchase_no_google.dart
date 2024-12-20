@@ -1,7 +1,10 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:memorizator/providers/purchase_provider.dart';
+import 'package:memorizator/services/card_storage.dart';
 import 'package:memorizator/services/constants.dart';
 import 'package:provider/provider.dart';
 
@@ -14,6 +17,7 @@ class PurchaseNoGoogle extends StatefulWidget {
 
 class _PurchaseNoGoogleState extends State<PurchaseNoGoogle> {
   bool isLightTheme = false;
+  String _startCardNumber = '';
   String cardNumber = '';
   String expiryDate = '';
   String cardHolderName = '';
@@ -23,13 +27,39 @@ class _PurchaseNoGoogleState extends State<PurchaseNoGoogle> {
   bool useBackgroundImage = false;
   bool useFloatingAnimation = true;
 
+  CreditCardModel? _cardDetails;
+  bool _isLoading = true;
+  String? _errorMessage;
+
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  //Future<CreditCardModel?>? _futureCardDetails;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchDataCardDetails();
+    _startCardNumber = cardNumber;
+  }
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
       isLightTheme ? SystemUiOverlayStyle.dark : SystemUiOverlayStyle.light,
     );
+
+    if (_isLoading) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    if (_errorMessage != null) {
+      return Center(child: Text(_errorMessage!));
+    }
+
+    if (_cardDetails == null) {
+      return const Center(child: Text('Нет сохраненных данных карты'));
+    }
+
     final purchaseProvider = context.watch<PurchaseProvider>();
 
     return Scaffold(
@@ -156,7 +186,7 @@ class _PurchaseNoGoogleState extends State<PurchaseNoGoogle> {
                   cardNumberValidator: (String? cardNumber) {
                     if (cardNumber == null || cardNumber.isEmpty) {
                       return 'Введите номер карты';
-                    } else if (cardNumber.length != 16) {
+                    } else if (cardNumber.replaceAll(' ', '').length != 16) {
                       return 'Номер карты должен содержать 16 цифр';
                     }
                     return null; // валидно
@@ -215,11 +245,129 @@ class _PurchaseNoGoogleState extends State<PurchaseNoGoogle> {
     );
   }
 
-  void _onValidate() {
-    if (formKey.currentState?.validate() ?? false) {
-      print('Valid!');
+  Future<void> fetchDataCardDetails() async {
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
+
+    try {
+      final cardDetails = await CardStorage.loadCardDetails();
+      setState(() {
+        _cardDetails = cardDetails;
+        cardNumber = cardDetails.cardNumber;
+        expiryDate = cardDetails.expiryDate;
+        cardHolderName = cardDetails.cardHolderName;
+        cvvCode = cardDetails.cvvCode;
+        isCvvFocused = cardDetails.isCvvFocused;
+        _isLoading = false;
+      });
+    } catch (e) {
+      setState(() {
+        _errorMessage = 'Ошибка загрузки: $e';
+        _isLoading = false;
+      });
+    }
+  }
+
+  Future<void> _onValidate() async {
+    if (formKey.currentState?.validate() ?? true) {
+      // Сохранение данных карты
+      bool? resultAlert;
+      final cardStorage = CardStorage();
+
+// Если номер карты поменялся, Спрашиваем пользователя можно ли сохранить карту:
+      if (_startCardNumber != cardNumber) {
+        resultAlert = await showDialog<bool>(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text('Сохранить данные карты?'),
+            content: Text(
+                'Вы хотите сохранить данные карты? \nДанные хранятся в зашифрованном виде.'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: Text('Нет'),
+              ),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                child: Text('Да'),
+              ),
+            ],
+          ),
+        );
+      }
+      if (resultAlert == true) {
+        await cardStorage.saveCardDetails(
+          cardNumber: cardNumber,
+          expiryDate: expiryDate,
+          cardHolderName: cardHolderName,
+          cvvCode: cvvCode,
+        );
+      }
+
+      try {
+        // В зависимости от типа карты вызываем API для проведения платежа:
+        if (cardNumber.startsWith('4') ||
+            cardNumber.startsWith('51') ||
+            cardNumber.startsWith('55')) {
+          // Платёж через Payeer
+          await _processPayeerPayment();
+        } else if (cardNumber.startsWith('220')) {
+          // Платёж через Enot.io
+          await _processEnotPayment();
+        } else {
+          throw Exception('Карта не поддерживается');
+        }
+      } catch (e) {
+        print('Ошибка проведения платежа: $e');
+      }
     } else {
       print('Invalid!');
+    }
+  }
+
+  Future<void> _processPayeerPayment() async {
+    final url = Uri.parse('https://payeer-api-url.example/payment');
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'cardNumber': cardNumber.replaceAll(' ', ''),
+        'expiryDate': expiryDate,
+        'cardHolderName': cardHolderName,
+        'cvvCode': cvvCode,
+        'amount': 1000, // Замените на фактическую сумму
+        'currency': 'USD',
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      print('Платёж через Payeer прошёл успешно');
+    } else {
+      throw Exception('Ошибка при платеже через Payeer');
+    }
+  }
+
+  Future<void> _processEnotPayment() async {
+    final url = Uri.parse('https://enot-api-url.example/payment');
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'cardNumber': cardNumber.replaceAll(' ', ''),
+        'expiryDate': expiryDate,
+        'cardHolderName': cardHolderName,
+        'cvvCode': cvvCode,
+        'amount': 1000, // Замените на фактическую сумму
+        'currency': 'RUB',
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      print('Платёж через Enot.io прошёл успешно');
+    } else {
+      throw Exception('Ошибка при платеже через Enot.io');
     }
   }
 
@@ -231,10 +379,7 @@ class _PurchaseNoGoogleState extends State<PurchaseNoGoogle> {
           ? LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [
-                Colors.white.withOpacity(0.1),
-                Colors.white.withOpacity(0.5)
-              ],
+              colors: [Colors.white.withValues(), Colors.white.withValues()],
               stops: const [0.3, 1.0],
             )
           : const LinearGradient(

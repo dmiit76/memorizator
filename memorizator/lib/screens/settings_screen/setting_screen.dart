@@ -6,6 +6,7 @@ import 'package:memorizator/providers/purchase_provider.dart';
 import 'package:memorizator/providers/settings_provider.dart';
 import 'package:memorizator/screens/settings_screen/ad_manager.dart';
 import 'package:memorizator/screens/settings_screen/instruction.dart';
+import 'package:memorizator/services/card_storage.dart';
 import 'package:memorizator/services/constants.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +18,19 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
+  bool? isDataSaved = false;
+
+  @override
+  void initState() {
+    super.initState();
+    checkCardData();
+  }
+
+  Future<void> checkCardData() async {
+    isDataSaved = await CardStorage().dataSaved();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     final settingsProvider = context.watch<SettingsProvider>();
@@ -283,7 +297,7 @@ class _SettingScreenState extends State<SettingScreen> {
             ),
             const BannerAdWidgetAdaptive(), // Показываем баннер
             Visibility(
-              visible: true, //!context.read<PurchaseProvider>().isPaidUser,
+              visible: true,
               child: ListTile(
                 contentPadding:
                     const EdgeInsets.only(bottom: 20, left: 20, right: 20),
@@ -314,6 +328,30 @@ class _SettingScreenState extends State<SettingScreen> {
                         // );
                       },
                       child: const Icon(Icons.shopping_cart_outlined)),
+                ),
+                //onTap: () {},
+              ),
+            ),
+
+            // Если ранее сохранялись данные карты - даем возможность их удалить.
+            Visibility(
+              //  метод класса CardStorage для проверки хранятся ли данные карты
+              visible: isDataSaved ?? false,
+              child: ListTile(
+                contentPadding:
+                    const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+                title: Text('Удалить данные платежной карты из приложения'),
+                trailing: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  child: ElevatedButton(
+                      style: myButtonStyle,
+                      onPressed: () async {
+                        await CardStorage().deleteCardDetails();
+                        setState(() {
+                          isDataSaved = false;
+                        });
+                      },
+                      child: const Icon(Icons.delete_outline)),
                 ),
                 //onTap: () {},
               ),
